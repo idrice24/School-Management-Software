@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+<meta charset="UTF-8" />
+<h1>message from included head</h1>
+</head>
+<body>
+    <div th:fragment="header">
+        <h1>Thymeleaf Fragments sample in div called from header</h1>
+    </div>
+    <p>Go to the next page to see fragments in action</p>
+    <aside>
+        <div>This is a sidebar</div>
+    </aside>
+    <div class="another">This is another sidebar</div>
+    <footer th:fragment="footera">
+	
+        <a th:href="@{/fragments}">Fragments Index</a> | 
+        <a th:href="@{/markup}">Markup inclussion</a> | 
+        <a th:href="@{/params}">Fragment params</a> | 
+		 <a th:href="@{/params}">les avocats</a> |
+		<a th:href="@{/params}">les plantains</a> | 		 
+        <a th:href="@{/other}">Other</a>
+    </footer>
+</body>
+</html>
