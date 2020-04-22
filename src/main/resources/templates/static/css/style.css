@@ -1,0 +1,52 @@
+body {
+    color: blue;
+    text-align: center;
+    padding: 10px;
+	background-color: yellow;
+}
+
+h2 {
+    color: white;
+    background-color: blue;
+}
+
+div.sec {
+    display: inline-block;
+    text-align: left;
+}
+
+section {
+    text-align: center;
+}
+
+div.secs {
+    display: inline-block;
+    color: white;
+    background-color: blue;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+h1 {
+    text-align: right;
+    display: right;
+}
+
+aside {
+    padding-top: 10px;
+    text-align: center;
+    color: white;
+    background-color: blue;
+    width: 40%;
+    float: right;
+}
+
+input[type=text] {
+    border: none;
+    border-bottom: thick dotted #f1f1f1;
+}
