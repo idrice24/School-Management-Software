@@ -1,1 +1,347 @@
 
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head lang="en">
+    <title>School Management System</title>
+    <!-- <div th:replace="fragments/headerinc :: header"></div> -->
+    <!--/*/ <th:block th:include="fragments/headerinc :: header"></th:block> /*/-->
+    <link rel="stylesheet" type="text/css" th:href="@{/css/font-awesome.min.css}" href="../static/css/font-awesome.min.css">
+
+    <style>
+        body {
+            background-color: rgb(218, 197, 197);
+            background-size: cover;
+            background-position: relative;
+            background-image: url("/images/backimage.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        
+        .navbar {
+            height: 30px;
+            width: 100%;
+            background-color: skyblue;
+            font-size: 30px;
+        }
+        
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        
+        li {
+            float: left;
+        }
+        
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        li a:hover:not(.active) {
+            background-color: #111;
+            text-decoration: none;
+        }
+        
+        .boxes {
+            display: inline-flex;
+            margin-top: 50px;
+            margin-left: 100px;
+        }
+        
+        .box-1:hover {
+            border: 2px solid rgb(128, 110, 110);
+            border-radius: 50px;
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+        
+        .box-2:hover {
+            border: 2px solid rgb(128, 110, 110);
+            border-radius: 50px;
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+        
+        .box-3:hover {
+            border: 2px solid rgb(128, 110, 110);
+            border-radius: 50px;
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+        
+        .box-4:hover {
+            border: 2px solid rgb(128, 110, 110);
+            border-radius: 50px;
+            box-shadow: 0 12px 16px 0 rgba(37, 30, 30, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+        
+        .box-1 {
+            background-color: rgb(240, 240, 143);
+            width: 250px;
+            height: 150px;
+            padding: 25px;
+            /*border: 25px solid navy;*/
+            margin: 20px;
+            text-align: center;
+        }
+        
+        .box-2 {
+            background-color: rgb(209, 138, 138);
+            width: 250px;
+            height: 150px;
+            padding: 25px;
+            /*border: 25px solid navy;*/
+            margin: 20px;
+        }
+        
+        .box-3 {
+            background-color: rgb(162, 214, 162);
+            width: 250px;
+            height: 150px;
+            padding: 25px;
+            /*border: 25px solid navy;*/
+            margin: 20px;
+            box-shadow: 50px;
+        }
+        
+        .box-4 {
+            background-color: rgb(165, 125, 132);
+            width: 250px;
+            height: 150px;
+            padding: 20px;
+            /*border: 25px solid navy;*/
+            margin: 20px;
+        }
+        
+        .boxes-2 {
+            display: inline-flex;
+            margin-left: 550px;
+        }
+        
+        .icon-bar {
+            width: 100%;
+            text-align: center;
+            background-color: #555;
+            overflow: auto;
+        }
+        
+        .icon-bar a {
+            width: 20%;
+            padding: 12px 0;
+            float: left;
+            transition: all 0.3s ease;
+            color: white;
+            font-size: 36px;
+        }
+        
+        .icon-bar a:hover {
+            background-color: #000;
+        }
+        
+        .active {
+            background-color: rgb(104, 175, 107);
+        }
+        
+        body {
+            font-family: Verdana, sans-serif;
+            font-size: 0.8em;
+            display: center;
+        }
+        
+        div#header,
+        div#footer,
+        div#content,
+        div#post {
+            display: inline-block;
+            border: 1px solid grey;
+            margin: 5px;
+            margin-bottom: 15px;
+            padding: 8px;
+            background-color: white;
+        }
+        
+        div#header,
+        div#footer {
+            color: white;
+            background-color: #444;
+            margin-bottom: 5px;
+        }
+        
+        div#content {
+            background-color: #ddd;
+        }
+        
+        div#menu ul {
+            margin: 0;
+            padding: 0;
+        }
+        
+        div#menu ul li {
+            display: inline;
+            margin: 5px;
+        }
+        
+        .dropbtn {
+            background-color: rgb(103, 163, 105);
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .dropbtn:hover,
+        .dropbtn:focus {
+            background-color: #95d897;
+        }
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            overflow: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        }
+        
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .dropdown a:hover {
+            background-color: #f1f1f1
+        }
+        
+        .show {
+            display: block;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <center>
+        <div class="boxes">
+            <!--box 1 starts here-->
+            <a href="http://localhost:8080/teachers/signup">
+                <div class="box-1">
+                    <h1>TEACHER</h1>
+                </div>
+                <!-- box 1 ends here-->
+            </a>
+            <!--boxe 2 starts here-->
+            <a href="http://localhost:8080/teachers/signup">
+                <div class="box-2">
+                    <h1>PROJECTS</h1>
+                </div>
+            </a>
+            <!--box 2 ends here-->
+            <!--box 3 starts here-->
+            <a href="http://localhost:8080/parents/signup">
+                <div class="box-3">
+                    <h1>PARENTS</h1>
+
+                </div>
+            </a>
+            <!--box 3 ends here-->
+            <!--box 2 starts here-->
+            <a href="http://localhost:8080/studlists/list">
+                <div class="box-4">
+                    <h1>STUDENT LIST</h1>
+
+                </div>
+            </a>
+            <!--box 4 ends here-->
+        </div>
+        <!--boxes end here-->
+
+
+
+        <!--boxes group 2-->
+        <div class="boxes">
+            <!--box 1 starts here-->
+            <a href="http://localhost:8080/students/list">
+                <div class="box-2">
+                    <h1>STUDENT</h1>
+                </div>
+            </a>
+            <!-- box 1 ends here-->
+
+            <!--boxe 2 starts here-->
+            <a href="http://localhost:8080/schools/list">
+                <div class="box-2">
+                    <h1>SCHOOL</h1>
+                </div>
+            </a>
+            <!--box 2 ends here-->
+
+            <!--box 3 starts here-->
+            <a href="#" th:href="@{/uploadform/signup}">
+                <div class="box-3">
+                    <h1>UPLOAD FILES</h1>
+                </div>
+                <!--box 3 ends here-->
+            </a>
+
+            <!--box 2 starts here-->
+            <a href="http://localhost:8080/specialitys/list">
+                <div class="box-4">
+                    <h1>Specialities</h1>
+                </div>
+                <!--box 4 ends here-->
+        </div>
+        </a>
+
+        <!--boxes group 3-->
+        <div class="boxes">
+            <!--box 1 starts here-->
+            <a href="http://localhost:8080/examtts/list">
+                <div class="box-1">
+                    <h1 style="display:center">EXAM T.TABLE</h1>
+                </div>
+                <!-- box 1 ends here-->
+            </a>
+            <!--boxe 2 starts here-->
+            <a href="http://localhost:8080/courses/list">
+                <div class="box-2">
+                    <h1 style="display:center">COURSE</h1>
+                </div>
+                <!--box 2 ends here-->
+            </a>
+            <!--box 3 starts here-->
+            <a href="http://localhost:8080/departments/list">
+                <div class="box-3">
+                    <h1>DEPART</h1>
+                </div>
+                <!--box 3 ends here-->
+            </a>
+            <!--box 2 starts here-->
+            <a href="http://localhost:8080/notices/list">
+                <div class="box-4">
+                    <h1>NOTICE</h1>
+                </div>
+                <!--box 4 ends here-->
+            </a>
+        </div>
+
+        <section>
+            <h4>welcome to my school management software</h4>
+        </section><br> love it and share!!!!
+</body>
+
+</html>
