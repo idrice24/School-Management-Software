@@ -1,0 +1,43 @@
+$(document).ready( function () {
+	 var table = $('#eleve16sTable').DataTable({
+			"sAjaxSource": "/eleve16sdata",
+			"sAjaxDataProp": "",
+			"order": [[ 0, "asc" ]],
+			"aoColumns": [
+					{ "mData": "matricule" },
+					{ "mData": "nom" },
+					{ "mData": "section" },
+					{ "mData": "classe" },
+					{ "mData": "salle" },
+					{ "mData": "codclas" },
+					{ "mData": "codsal" },
+					{ "mData": "datins" },
+					{ "mData": "datnai" },
+					{ "mData": "debcli" },
+					{ "mData": "gsang" },
+					{ "mData": "handicap" },
+					{ "mData": "lieunai" },
+					{ "mData": "loc1" },
+					{ "mData": "mailmere" },
+					{ "mData": "mailpere" },
+					{ "mData": "mailtut" },
+					{ "mData": "nommere" },
+					{ "mData": "nompere" },
+					{ "mData": "nouveau" },
+					{ "mData": "pension" },
+					{ "mData": "peye" },
+					{ "mData": "profmere" },
+					{ "mData": "profpere" },
+					{ "mData": "qltcli" },
+					{ "mData": "redoublant" },
+					{ "mData": "religion" },
+					{ "mData": "rsoetb" },
+					{ "mData": "rstut" },
+					{ "mData": "sexe" },
+					{ "mData": "solde" },
+					{ "mData": "telere" },
+					{ "mData": "telpere" },
+					{ "mData": "teltut" }
+			]
+	 })
+});
