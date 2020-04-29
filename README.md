@@ -1,6 +1,6 @@
 # School-Management-Software
-# Online Classes
-
+this project is to manage all the different type of active carry in a school campus.
+this software can be use in Primary School to University.
 
 # springboot-crud
 
