@@ -1,19 +1,51 @@
+Microsoft Windows [Version 10.0.18362.778]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+C:\Users\Lenovo>cd C:\Users\Lenovo\Desktop\add\spring-boot-tutorial-master\springboot-upload-download-file-rest-api-example
+
+C:\Users\Lenovo\Desktop\add\spring-boot-tutorial-master\springboot-upload-download-file-rest-api-example>mvn spring-boot:run
 [INFO] Scanning for projects...
-[INFO] 
+[INFO]
 [INFO] ------------------------------------------------------------------------
-[INFO] Building EasyFleet3.7 1.0.2-SNAPSHOT
+[INFO] Building EasyFleet3.7 2.0.2-SNAPSHOT
 [INFO] ------------------------------------------------------------------------
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time: 3.796 s
-[INFO] Finished at: 2019-10-11T10:00:32+01:00
-[INFO] Final Memory: 8M/22M
-[INFO] ------------------------------------------------------------------------
-[ERROR] Unknown lifecycle phase "spring-boot". You must specify a valid lifecycle phase or a goal in the format <plugin-prefix>:<goal> or <plugin-group-id>:<plugin-artifact-id>[:<plugin-version>]:<goal>. Available lifecycle phases are: validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy, pre-clean, clean, post-clean, pre-site, site, post-site, site-deploy. -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/LifecyclePhaseNotFoundException
+[INFO]
+[INFO] >>> spring-boot-maven-plugin:2.1.3.RELEASE:run (default-cli) > test-compile @ spring-boot-web >>>
+[INFO]
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ spring-boot-web ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 0 resource
+[INFO]
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ spring-boot-web ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 8 source files to C:\Users\Lenovo\Desktop\add\spring-boot-tutorial-master\springboot-upload-download-file-rest-api-example\target\classes
+[INFO]
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ spring-boot-web ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\Lenovo\Desktop\add\spring-boot-tutorial-master\springboot-upload-download-file-rest-api-example\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ spring-boot-web ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] <<< spring-boot-maven-plugin:2.1.3.RELEASE:run (default-cli) < test-compile @ spring-boot-web <<<
+[INFO]
+[INFO]
+[INFO] --- spring-boot-maven-plugin:2.1.3.RELEASE:run (default-cli) @ spring-boot-web ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.3.RELEASE)
+
+2020-04-29 02:37:00.767  INFO 7012 --- [  restartedMain] .SpringbootUploadDownloadFileApplication : Starting SpringbootUploadDownloadFileApplication on idrice24 with PID 7012 (C:\Users\Lenovo\Desktop\add\spring-boot-tutorial-master\springboot-upload-download-file-rest-api-example\target\classes started by Lenovo in C:\Users\Lenovo\Desktop\add\spring-boot-tutorial-master\springboot-upload-download-file-rest-api-example)
+2020-04-29 02:37:00.857  INFO 7012 --- [  restartedMain] .SpringbootUploadDownloadFileApplication : No active profile set, falling back to default profiles: default
+2020-04-29 02:37:01.918  INFO 7012 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-29 02:37:01.919  INFO 7012 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-29 02:37:24.630  INFO 7012 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-04-29 02:37:25.497  INFO 7012 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 561ms. Found 0 repository interfaces.
+2020-04-29 02:37:33.215  INFO 7012 --- [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a25f221f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
