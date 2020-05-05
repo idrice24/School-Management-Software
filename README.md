@@ -8,10 +8,10 @@ Spring Boot CRUD  is demonstrating how to implement simple CRUD operations with 
 
 ## What's inside 
 This project is based on the [Spring Boot](http://projects.spring.io/spring-boot/) project and uses these packages :
-- Maven
-- Spring Core
-- Spring Data (Hibernate & MySQL)
-- Spring MVC (Tomcat)
+- [Maven] (https://maven.apache.org/)
+- [Spring Core] (https://spring.io/)
+- [Spring Data] (Hibernate & MySQL)
+- [Spring MVC] (Tomcat)
 - [Thymleaf](www.thymeleaf.org)
 
 ##Technologies
