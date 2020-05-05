@@ -6,7 +6,7 @@ Spring Boot CRUD demo is demonstrating how to implement simple CRUD operations w
 This project is based on the [Spring Boot](http://projects.spring.io/spring-boot/) project and uses these packages :
 - [Maven](https://maven.apache.org/)
 - [Spring Core](https://spring.io/)
-- [Spring Data](Hibernate & MySQL)
+- Spring Data(Hibernate & MySQL)
 - [Spring MVC](Tomcat)
 - [Thymleaf](www.thymeleaf.org)
 
