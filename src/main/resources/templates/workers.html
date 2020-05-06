@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Users</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="../css/shards.min.css"> -->
+    <div th:replace="fragments/headerinc :: header"></div>
+
+</head>
+
+<body>
+    <div class="container my-2">
+        <div class="card">
+            <div class="card-body">
+                <div th:switch="${workers}" class="container my-5">
+                    <p class="my-5">
+                        <a href="/workers/signup" class="btn btn-primary"><i
+							class="fas fa-user-plus ml-2"> Add worker</i></a>
+                    </p>
+                    <p class="my-10">
+                        <a href="/workers/list" class="btn btn-secondary">
+                            <i class="fas fa-user-minus media-list">Workers List</i>
+                        </a>
+                    </p>
+                    <div class="col-md-10">
+                        <h2 th:case="null">No workers yet!</h2>
+                        <div th:case="*">
+                            <table class="table table-striped table-responsive-md">
+                                <thead>
+                                    <tr>
+                                        <th>Firstname</th>
+                                        <th>LastName</th>
+                                        <th>Email</th>
+                                        <th>Phone No</th>
+                                        <th>Dept.</th>
+                                        <th>Gender</th>
+                                        <th>Edit</th>
+                                        <th>Delete</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr th:each="worker : ${workers}">
+                                        <td th:text="${worker.firstname}"></td>
+                                        <td th:text="${worker.lastname}"></td>
+                                        <td th:text="${worker.email}"></td>
+                                        <td th:text="${worker.contact}"></td>
+                                        <td th:text="${worker.dept}"></td>
+                                        <td th:text="${worker.gender}"></td>
+                                        <td><a th:href="@{/workers/edit/{id}(id=${worker.id})}" class="btn btn-primary"><i class="fas fa-user-edit ml-2"></i></a></td>
+                                        <td><a th:href="@{/workers/delete/{id}(id=${worker.id})}" class="btn btn-danger"><i class="fas fa-user-times ml-2"></i></a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
