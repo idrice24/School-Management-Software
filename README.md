@@ -6,7 +6,7 @@ It is demonstrating how to implement simple CRUD operations with a `Product` ent
 **#Server
 This project is based on the [Spring Boot](http://projects.spring.io/spring-boot/) project use these packages :
 - [Neteans IDE](https://netbeans.org/index.html)
-* this ide help us to:
+* this IDE help us to:
     - Setting Up the Project
     - Adding Code to the Generated Source File
     - Compiling and Running the Application
@@ -25,6 +25,8 @@ This project is based on the [Spring Boot](http://projects.spring.io/spring-boot
     - Thymeleaf is a modern server-side Java template engine for both web and standalone environments. it help to design and deploy HTML on the browser.
 - [JDK](http://java.sun.com/javase/downloads/index.jsp)
     - Which stand for Java Development Kit, which help us to develop, text, protype, and demonstrate JAVA Apps.
+    
+  **#Client Side
 
 ## Installation 
 The project is created with Maven, so you just need to import it to your IDE and build the project to resolve the dependencies
@@ -43,4 +45,4 @@ spring.jpa.hibernate.ddl-auto=update
 ## Usage 
 Run the project and head out to [http://localhost:8080](http://localhost:8080)
 * Login Page
-
+C:\Users\Lenovo\Pictures\adminlogin.png
