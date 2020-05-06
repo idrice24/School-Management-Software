@@ -1,4 +1,4 @@
-# A springboot project on School Management Software
+# A School Management Software project
 
 it is demonstrating how to implement simple CRUD operations with a `Product` entity.
 
