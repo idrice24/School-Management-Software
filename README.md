@@ -25,8 +25,9 @@ This project is based on the [Spring Boot](http://projects.spring.io/spring-boot
     - Thymeleaf is a modern server-side Java template engine for both web and standalone environments. it help to design and deploy HTML on the browser.
 - [JDK](http://java.sun.com/javase/downloads/index.jsp)
     - Which stand for Java Development Kit, which help us to develop, text, protype, and demonstrate JAVA Apps.
-    
-  **#Client Side
+ 
+ 
+**#Client Side
 
 ## Installation 
 The project is created with Maven, so you just need to import it to your IDE and build the project to resolve the dependencies
