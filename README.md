@@ -45,4 +45,4 @@ spring.jpa.hibernate.ddl-auto=update
 ## Usage 
 Run the project and head out to [http://localhost:8080](http://localhost:8080)
 * Login Page
-![loginpage](http://C:\Users\Lenovo\Pictures\adminlogin.png)
+![loginpage](https://github.com/idrice24/School-Management-Software/blob/master/src/main/resources/static/images/adminlogin.PNG)
