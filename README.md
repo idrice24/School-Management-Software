@@ -1,17 +1,17 @@
 # A School Management Software project
 
-it is demonstrating how to implement simple CRUD operations with a `Product` entity.
+It is demonstrating how to implement simple CRUD operations with a `Product` entity.
 
 ## Technologies (IDE) client/server
 **#Server
 This project is based on the [Spring Boot](http://projects.spring.io/spring-boot/) project use these packages :
 - [Neteans IDE](https://netbeans.org/index.html)
-* this ide help us to :
-    Setting Up the Project
-    Adding Code to the Generated Source File
-    Compiling and Running the Application
-    Building and Deploying the Application
-    Next Steps
+* this ide help us to:
+    - Setting Up the Project
+    - Adding Code to the Generated Source File
+    - Compiling and Running the Application
+    - Building and Deploying the Application
+    - Next Steps
   To complete this tutorial, you need the following software and resources
 - [Maven](https://maven.apache.org/)
 - [Spring Core](https://spring.io/projects/spring-boot)
