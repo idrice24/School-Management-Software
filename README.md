@@ -54,3 +54,5 @@ Run the project and head out to [http://localhost:8080](http://localhost:8080)
 https://github.com/idrice24/School-Management-Software.wiki.git
 
 https://github.com/darrachequesne/spring-data-jpa-datatables
+
+https://www.javaguides.net/2019/04/spring-boot-thymeleaf-crud-example-tutorial.html
