@@ -52,3 +52,5 @@ Run the project and head out to [http://localhost:8080](http://localhost:8080)
 
 ## Links to sample projects and wiki
 https://github.com/idrice24/School-Management-Software.wiki.git
+
+https://github.com/darrachequesne/spring-data-jpa-datatables
