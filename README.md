@@ -1,4 +1,4 @@
-# A School Management Software project
+# A School Management Software 
 
 It is demonstrating how to implement simple CRUD operations with a `Product` entity.
 
