@@ -4,10 +4,9 @@ It is demonstrating how to implement simple CRUD operations with a `Product` ent
 And also how to process data in sql in DataBase (DB) to have well define information about a particular product.
 
 ## Technologies (IDE) client/server
-**#Server
+**# Server
 This project is based on the [Spring Boot](http://projects.spring.io/spring-boot/) project use these packages :
 - [Neteans IDE](https://netbeans.org/index.html)
-* this IDE help us to:
     - Setting Up the Project
     - Adding Code to the Generated Source File
     - Compiling and Running the Application
@@ -26,9 +25,6 @@ This project is based on the [Spring Boot](http://projects.spring.io/spring-boot
     - Thymeleaf is a modern server-side Java template engine for both web and standalone environments. it help to design and deploy HTML on the browser.
 - [JDK](http://java.sun.com/javase/downloads/index.jsp)
     - Which stand for Java Development Kit, which help us to develop, text, protype, and demonstrate JAVA Apps.
- 
- 
-**#Client Side
 
 ## Installation 
 The project is created with Maven, so you just need to import it to your IDE and build the project to resolve the dependencies
