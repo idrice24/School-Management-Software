@@ -48,7 +48,7 @@ Run the project and head out to [http://localhost:8080](http://localhost:8080)
 *home page
 ![homepage](https://github.com/idrice24/School-Management-Software/blob/master/src/main/resources/static/images/home%20page.PNG)
 *Admin Signup
-![adminregistration](http://github.com/idrice24/School-Management-Software/blob/master/src/main/resources/static/images/adminregistration.PNG)
+![adminregistration](https://github.com/idrice24/School-Management-Software/blob/master/src/main/resources/static/images/adminregistration.PNG)
 
 
 ## Links to sample projects and wiki
