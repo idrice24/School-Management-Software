@@ -1,0 +1,4 @@
+language : java
+  mvn:
+      - 3.6.3
+      - spring-boot
