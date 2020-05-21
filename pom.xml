@@ -85,6 +85,11 @@
   	 <groupId>org.springframework.boot</groupId>
    	<artifactId>spring-boot-starter-mail</artifactId>
 		</dependency>
+	    <dependency>
+    <groupId>com.opencsv</groupId>
+    <artifactId>opencsv</artifactId>
+    <version>5.0</version>
+</dependency>
 		
     </dependencies>
     <properties>
