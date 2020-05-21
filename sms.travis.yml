@@ -1,4 +1,25 @@
-language : java
-  mvn:
-      - 3.6.3
-      - spring-boot
+sudo: false
+language: java
+jdk:
+  - oraclejdk8
+services:
+  - mysql
+  - pgsql
+matrix:
+  include:
+  - jdk: oraclejdk8
+    env: DB=h2
+  - jdk: oraclejdk8
+    env: DB=mysql
+  - jdk: oraclejdk8
+    env: DB=pgsql
+
+script: mvn test -Dspring.profiles.active=$DB
+
+before_script:
+  - sh -c "if [ '$DB' = 'pgsql' ]; then psql -c 'CREATE DATABASE test;' -U postgres; fi"
+  - sh -c "if [ '$DB' = 'mysql' ]; then mysql -e 'CREATE DATABASE IF NOT EXISTS test;' -uroot; fi"
+
+cache:
+  directories:
+  - $HOME/.m2
