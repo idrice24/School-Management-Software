@@ -1,5 +1,17 @@
 # A School Management Software 
+<p align="center">
+	<a href="#development">Development</a>.
+	<a href="#service-apis">Service APIs</a>.
+	<a href="#documentation">Documentation</a>.
+	<a href="#support-and-feedback">Support</a>.
+	<a href="#how-to-contribute">Contribute</a>.
+	<a href="#contributors">Contributors</a>.
+	<a href="#repositories">Repositories</a>.
+	<a href="#liecensing">Licensing</a>
+</p>
+<p>
 The School Management System in Java Spring Boot is an application developed for schools. It is an application developed in Java Spring boot which store all the school related records. it stores information about student, staff and teachers. The DataBase used is MySQL. My objective of developing such a system its to reduce the errors that creep in the manual system where it was very difficult to store record.The whole System is managed by the administrator who has all the privilages to edit or modify any school member info. A student can view his/her details by logging with their details. It is easy to use and also secure.
+    </p>
 
 ## Technologies (IDE) client/server
 # Server
