@@ -14,7 +14,7 @@ The School Management System in Java Spring Boot is an application developed for
  </p>
  
  ## Architecture Overview
-You can find the architecture overview [here](/documents/architecture_overview.md), which will give ou a good starting point in how the backend services interact with other services, and purpose the serve.
+You can find the architecture overview [here](documents/architecture_overview.md), which will give ou a good starting point in how the backend services interact with other services, and purpose the serve.
 
 
 ## Documentation
