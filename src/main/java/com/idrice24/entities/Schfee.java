@@ -79,7 +79,11 @@ public class Schfee {
     }
 
     public void setRest( long rest){
+	    if(amount < 450000){
         this.rest = 450000 - amount;
+	    }else{
+System.out.printf("you are above the amount!!");
+	    }
     }
     public long getRest(){
         return rest;
