@@ -49,7 +49,7 @@ You may obtain a copy of the License at linkhere.
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" basis, without warranties or condition of any kind, either express or implied. see [LICENSE](./LICENSE) for the specific language governing permisssions and limitations under the License.
 
 ## Technologies (IDE) client/server
-# Server
+# Server Side
 This project is based on the [Spring Boot](http://projects.spring.io/spring-boot/) project use these packages :
 - [Neteans IDE](https://netbeans.org/index.html)
     - Setting Up the Project
@@ -79,9 +79,9 @@ Run the project and head out to [http://localhost:8080](http://localhost:8080)
 * Login Page
 ![loginpage](https://github.com/idrice24/School-Management-Software/blob/master/src/main/resources/static/images/adminlogin.PNG)
 
-*home page
+* Home page
 ![homepage](https://github.com/idrice24/School-Management-Software/blob/master/src/main/resources/static/images/home%20page.PNG)
-*Admin Signup
+* Admin Signup
 ![adminregistration](https://github.com/idrice24/School-Management-Software/blob/master/src/main/resources/static/images/adminregistration.PNG)
 
 
