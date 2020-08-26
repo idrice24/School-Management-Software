@@ -33,10 +33,10 @@ public class LoginController {
         return modelAndView;
     }
 	
-	@RequestMapping(value={"/index"}, method = RequestMethod.GET)
+	@RequestMapping(value={"/home"}, method = RequestMethod.GET)
     public ModelAndView monindex(){
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("index");
+        modelAndView.setViewName("home");
         return modelAndView;
     }
     @RequestMapping(value={"/files/studentboard"}, method = RequestMethod.GET)
