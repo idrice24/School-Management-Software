@@ -1,0 +1,79 @@
+<html>
+<head>
+    <title>Welcome</title>
+    <style>
+        body{
+            background-color: #eee;
+            background-position: right top;
+            padding-top: 10%;
+            padding-left: 30%;
+        }
+        section{
+            text-align: center;
+            padding-top: 10%;
+            border: 8px;
+            height: auto;
+            width: 50%;
+            border-style: solid;
+            display: center;
+            background-image: url(../static/images/3.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        aside{
+            padding-top: 5%;
+        }
+        article a{
+            color: greenyellow;
+            text-align: center;
+        }
+        h1{
+            float: center;
+            color: white;
+            
+        }
+        button{
+            display: inline-block;
+            border-radius: 4px;
+            background-color: greenyellow;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 28px;
+            padding: 20px;
+            width: 200px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button span{
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+        button span:after{
+            content:'\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+    </style>
+    </head>
+<body>
+    <section>
+    <h1 style="display:center">Welcome To My Sorftware<br>(SCHOOL MANAGEMENT SYSTEM)</h1>
+    
+        <article style="color:black"><h3>To test my Apps please  </h3>  <form th:action="@{/login}" method="get">
+        <button style="vertical-align:middle" type="Submit"><span>Go To Login Page</span></button>
+    </form></article>
+    
+        <aside>Created and Written by Tsafouet Idrice "idrice24"
+        </aside>
+        for more info<a href="https://github.com/idrice24">Meet Me At......</a>
+    </section>
+    
+    </body>
+</html>
