@@ -43,7 +43,7 @@ The following public repositories are currentl available for the School Manageme
 |[sms-verification-server]| Backend Implomentation of the verication process							|
 
 ## Licensing
-Copyright (c) 2020 SAP SE or an SAP affiliate company.
+Copyright (c) 2020 IDRICE24 company.
 Licensed under the **Apache License, Version 2.0** (the "License"); you may not use this file except in compliance with the License.
 You may obtain a copy of the License at linkhere.
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" basis, without warranties or condition of any kind, either express or implied. see [LICENSE](./LICENSE) for the specific language governing permisssions and limitations under the License.
