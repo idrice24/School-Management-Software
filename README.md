@@ -33,7 +33,8 @@ The following channels are available for discussions, feedback, and support requ
 Contributors and feedback are encouraged and welcome. For more information about how to contribute, the project structure, as well as additional contribution information, see our [Contributors Guidelines](./CONTRIBUTING.md). By participating in this project, you agree to abide by its [Code of Conduct](./CODE:OF_CONDUCT.md) at all times.
 
 ## Contributors 
-NOT YET!
+- idrice24
+- Ghislain1
 ## Repositories
 The following public repositories are currentl available for the School Management System:
 | Repository		|Description																		|
