@@ -20,7 +20,7 @@ You can find the architecture overview [here](documents/architecture-overview.md
 ## Documentation
 The full documentation of this software can be found in the [sms-documentation](https://) repository. The documentation repository contains technical documents, architecture information, and whitepapers related to this implementation.
 
-## Suport and Feedback
+## Support-and-feedback
 The following channels are available for discussions, feedback, and support requests:
 |Type							| Channels 																|
 |-------------------------------|-----------------------------------------------------------------------|
@@ -42,7 +42,7 @@ The following public repositories are currentl available for the School Manageme
 |[sms-server]		| Backend implementation for the Google exposure APIs 								|
 |[sms-verification-server]| Backend Implomentation of the verication process							|
 
-## Licensing
+## Liecensing
 Copyright (c) 2020 IDRICE24 company.
 Licensed under the **Apache License, Version 2.0** (the "License"); you may not use this file except in compliance with the License.
 You may obtain a copy of the License at linkhere.
@@ -71,8 +71,12 @@ This project is based on the [Spring Boot](http://projects.spring.io/spring-boot
 - [JDK](http://java.sun.com/javase/downloads/index.jsp)
     - Which stand for Java Development Kit, which help us to develop, text, protype, and demonstrate JAVA Apps.
 
-## Installation 
+## Development
 The project is created with Maven, so you just need to import it to your IDE and build the project to resolve the dependencies
+
+## Service-apis
+
+## Repositories
 
 ## Usage 
 Run the project and head out to [http://localhost:8080](http://localhost:8080)
