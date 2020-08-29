@@ -24,7 +24,7 @@ The full documentation of this software can be found in the [sms-documentation](
 The following channels are available for discussions, feedback, and support requests:
 |Type							| Channels 																|
 |-------------------------------|-----------------------------------------------------------------------|
-| **General Discussion** | <a href=""></a> |
+| **General Discussion** | <a href="https://github.com/idrice24/School-Management-Software/issues/new/choose" title="General Discussion"><img src="https://img.shields.io/github/issues/corona-warn-app/cwa-documentation/question.svg?style=flat-square"></a></a> |
 | **Concept Feedback**	 | <a href=""></a> |
 | **Backend Issue**		 | <a href=""></a> |
 | **Other Requests**	 | <a href=""></a> |
