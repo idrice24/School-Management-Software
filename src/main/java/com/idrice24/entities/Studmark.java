@@ -1,18 +1,19 @@
-package com.idrice24.entities;
 
+package com.idrice24.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.validation.constraints.NotBlank;
 
 @Entity
-public class Studmark{
+public class Studmark
+{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+
     @Column(name = "name")
     private String name;
 
@@ -25,7 +26,7 @@ public class Studmark{
     @Column(name = "speciality")
     private String speciality;
 
-    @Column(name ="marks")
+    @Column(name = "marks")
     private Double marks;
 
     @Column(name = "status")
@@ -34,75 +35,106 @@ public class Studmark{
     @Column(name = "level")
     private long level;
 
-    @Column(name ="credit")
+    @Column(name = "credit")
     private long credit;
 
-    public Studmark(){}
+    public Studmark()
+    {
+    }
 
-    public Studmark(String matricule, String course ){
+    public Studmark(String matricule, String course)
+    {
         this.matricule = matricule;
         this.course = course;
     }
 
-    public void setId(long id){
+    public void setId(long id)
+    {
         this.id = id;
     }
-    public long getId(){
+
+    public long getId()
+    {
         return id;
     }
 
-    public void setMatricule(String matricule){
+    public void setMatricule(String matricule)
+    {
         this.matricule = matricule;
     }
-    public String getMatricule(){
+
+    public String getMatricule()
+    {
         return matricule;
     }
 
-    public void setCourse(String course){
+    public void setCourse(String course)
+    {
         this.course = course;
     }
-    public String getCourse(){
+
+    public String getCourse()
+    {
         return course;
     }
 
-    public void setSpeciality(String speciality){
+    public void setSpeciality(String speciality)
+    {
         this.speciality = speciality;
     }
-    public String getSpeciality(){
+
+    public String getSpeciality()
+    {
         return speciality;
     }
 
-    public void setName(String name){
+    public void setName(String name)
+    {
         this.name = name;
     }
-    public String getName(){
+
+    public String getName()
+    {
         return name;
     }
 
-    public void setMarks(Double marks){
+    public void setMarks(Double marks)
+    {
         this.marks = marks;
     }
-    public Double getMarks(){
+
+    public Double getMarks()
+    {
         return marks;
     }
 
-    public void setStatus(String status){
+    public void setStatus(String status)
+    {
         this.status = status;
     }
-    public String getStatus(){
+
+    public String getStatus()
+    {
         return status;
     }
-    public void setLevel(Long level){
+
+    public void setLevel(Long level)
+    {
         this.level = level;
     }
-    public Long getLevel(){
+
+    public Long getLevel()
+    {
         return level;
     }
 
-    public void setCredit(Long credit){
+    public void setCredit(Long credit)
+    {
         this.credit = credit;
     }
-    public Long getCredit(){
+
+    public Long getCredit()
+    {
         return credit;
     }
 }
