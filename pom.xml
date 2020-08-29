@@ -124,7 +124,11 @@
             <version>5.3.6.Final</version>
             <scope>runtime</scope>       
         </dependency>
-
+	    
+	<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-amqp</artifactId>
+        </dependency>
 		
     </dependencies>
     <properties>
