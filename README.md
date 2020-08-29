@@ -1,6 +1,6 @@
 # A School Management Software 
 <p align="center">
-	<a href="#development">Development</a>.
+	<a href="#development">Development</a></a>.
 	<a href="#service-apis">Service APIs</a>.
 	<a href="#documentation">Documentation</a>.
 	<a href="#support-and-feedback">Support</a>.
@@ -20,20 +20,21 @@ You can find the architecture overview [here](documents/architecture-overview.md
 ## Documentation
 The full documentation of this software can be found in the [sms-documentation](https://) repository. The documentation repository contains technical documents, architecture information, and whitepapers related to this implementation.
 
-## Suport and Feedback
+## Support-and-feedback
 The following channels are available for discussions, feedback, and support requests:
 |Type							| Channels 																|
 |-------------------------------|-----------------------------------------------------------------------|
-| **General Discussion** | <a href=""></a> |
-| **Concept Feedback**	 | <a href=""></a> |
-| **Backend Issue**		 | <a href=""></a> |
-| **Other Requests**	 | <a href=""></a> |
+| **General Discussion** | <a href="https://github.com/idrice24/School-Management-Software/issues/new/choose" title="General Discussion"><img src="https://img.shields.io/badge/idrice24-issues-blue"></a></a> |
+| **Concept Feedback**	 | <a href="https://github.com/idrice24/School-Management-Software/issues/new/choose"><img src="https://img.shields.io/badge/idrice24-issues-blue"></a></a> |
+| **Backend Issue**		 | <a href="https://github.com/idrice24/School-Management-Software/issues/new/choose"><img src="https://img.shields.io/badge/idrice24-issues-blue"></a></a> |
+| **Other Requests**	 | <a href="idrice.tsafouet@yahoo.com" title="Email IDRICE24 Team"><img src="https://img.shields.io/badge/idrice24-issues-blue"></a></a> |
 
 ## How to Contribute
 Contributors and feedback are encouraged and welcome. For more information about how to contribute, the project structure, as well as additional contribution information, see our [Contributors Guidelines](./CONTRIBUTING.md). By participating in this project, you agree to abide by its [Code of Conduct](./CODE:OF_CONDUCT.md) at all times.
 
 ## Contributors 
-NOT YET!
+- idrice24
+- Ghislain1
 ## Repositories
 The following public repositories are currentl available for the School Management System:
 | Repository		|Description																		|
@@ -42,8 +43,8 @@ The following public repositories are currentl available for the School Manageme
 |[sms-server]		| Backend implementation for the Google exposure APIs 								|
 |[sms-verification-server]| Backend Implomentation of the verication process							|
 
-## Licensing
-Copyright (c) 2020 SAP SE or an SAP affiliate company.
+## Liecensing
+Copyright (c) 2020 IDRICE24 company.
 Licensed under the **Apache License, Version 2.0** (the "License"); you may not use this file except in compliance with the License.
 You may obtain a copy of the License at linkhere.
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" basis, without warranties or condition of any kind, either express or implied. see [LICENSE](./LICENSE) for the specific language governing permisssions and limitations under the License.
@@ -71,8 +72,12 @@ This project is based on the [Spring Boot](http://projects.spring.io/spring-boot
 - [JDK](http://java.sun.com/javase/downloads/index.jsp)
     - Which stand for Java Development Kit, which help us to develop, text, protype, and demonstrate JAVA Apps.
 
-## Installation 
+## Development
 The project is created with Maven, so you just need to import it to your IDE and build the project to resolve the dependencies
+
+## Service-apis
+
+## Repositories
 
 ## Usage 
 Run the project and head out to [http://localhost:8080](http://localhost:8080)
