@@ -1,6 +1,6 @@
 # A School Management Software 
 <p align="center">
-	<a href="#development"><img src="https://img.shields.io/github/issues/corona-warn-app/cwa-documentation/question.svg?style=flat-square">Development</a></a>.
+	<a href="#development">Development</a></a>.
 	<a href="#service-apis">Service APIs</a>.
 	<a href="#documentation">Documentation</a>.
 	<a href="#support-and-feedback">Support</a>.
@@ -24,10 +24,10 @@ The full documentation of this software can be found in the [sms-documentation](
 The following channels are available for discussions, feedback, and support requests:
 |Type							| Channels 																|
 |-------------------------------|-----------------------------------------------------------------------|
-| **General Discussion** | <a href="https://github.com/idrice24/School-Management-Software/issues/new/choose" title="General Discussion"><img src="https://img.shields.io/github/issues/corona-warn-app/cwa-documentation/question.svg?style=flat-square"></a></a> |
-| **Concept Feedback**	 | <a href="https://github.com/idrice24/School-Management-Software/issues/new/choose"><img src="https://img.shields.io/github/issues/corona-warn-app/cwa-documentation/question.svg?style=flat-square"></a></a> |
-| **Backend Issue**		 | <a href="https://github.com/idrice24/School-Management-Software/issues/new/choose"><img src="https://img.shields.io/github/issues/corona-warn-app/cwa-documentation/question.svg?style=flat-square"></a></a> |
-| **Other Requests**	 | <a href="idrice.tsafouet@yahoo.com"><img src="https://img.shields.io/github/issues/corona-warn-app/cwa-documentation/question.svg?style=flat-square"></a></a> |
+| **General Discussion** | <a href="https://github.com/idrice24/School-Management-Software/issues/new/choose" title="General Discussion"><img src="https://img.shields.io/badge/idrice24-issues-blue"></a></a> |
+| **Concept Feedback**	 | <a href="https://github.com/idrice24/School-Management-Software/issues/new/choose"><img src="https://img.shields.io/badge/idrice24-issues-blue"></a></a> |
+| **Backend Issue**		 | <a href="https://github.com/idrice24/School-Management-Software/issues/new/choose"><img src="https://img.shields.io/badge/idrice24-issues-blue"></a></a> |
+| **Other Requests**	 | <a href="idrice.tsafouet@yahoo.com" title="Email IDRICE24 Team"><img src="https://img.shields.io/badge/idrice24-issues-blue"></a></a> |
 
 ## How to Contribute
 Contributors and feedback are encouraged and welcome. For more information about how to contribute, the project structure, as well as additional contribution information, see our [Contributors Guidelines](./CONTRIBUTING.md). By participating in this project, you agree to abide by its [Code of Conduct](./CODE:OF_CONDUCT.md) at all times.
