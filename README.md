@@ -1,5 +1,7 @@
 # A School Management Software
-    <a href="https://github.com/idrice24/School-Management-Software/issues/" title="Last Commit"><img src="https://img.shields.io/github/issues/idrice24/School-Management-Software?style=flat-square "></a>
+<p align="center">
+    <a href="https://github.com/idrice24/School-Management-Software/issues/" title="Open Issues"><img src="https://img.shields.io/github/issues/idrice24/School-Management-Software?style=flat-square "></a>
+</p>
 . 
 <p align="center">
 	<a href="#development">Development</a></a>.
