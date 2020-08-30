@@ -1,4 +1,5 @@
-# A School Management Software 
+# A School Management Software
+. https://img.shields.io/github/issues/idrice24/School-Management-Software?style=flat-square 
 <p align="center">
 	<a href="#development">Development</a></a>.
 	<a href="#service-apis">Service APIs</a>.
