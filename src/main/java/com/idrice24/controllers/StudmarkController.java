@@ -35,21 +35,9 @@ public class StudmarkController
     private CourseService courseService;
 
     @Autowired
-    public void setStudlistService(StudlistService studlistService)
-    {
-        this.studlistService = studlistService;
-    }
-
-    @Autowired
     public void setCourseService(CourseService courseService)
     {
         this.courseService = courseService;
-    }
-
-    @Autowired
-    public void setStudmarkService(StudmarkService studmarkService)
-    {
-        this.studmarkService = studmarkService;
     }
 
     @Autowired
