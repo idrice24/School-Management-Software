@@ -1,42 +1,43 @@
-# Java Gradle CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-java/ for more details
-#
-version: 2
+version: 2.1
+# Ref: https://learnxinyminutes.com/docs/yaml/
 jobs:
   build:
-    docker:
-      # specify the version you desire here
-      - image: circleci/openjdk:8-jdk
-
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/postgres:9.4
-
-    working_directory: ~/repo
-
-    environment:
-      # Customize the JVM maximum heap limit
-      JVM_OPTS: -Xmx3200m
-      TERM: dumb
-
+    # Set the root directory for need files
+    working_directory: ~/School-Management-Software
+    # Set PC-Machine properties where the build should run
+    machine:
+      image: ubuntu-1604:202004-01
+      docker_layer_caching: true
+    # Define sequences inside the steps  that s why - sign
     steps:
+      # Checkout code on the machine (1. Sequence)
       - checkout
-
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "build.gradle" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
-
-      - run: gradle dependencies
-
-      - save_cache:
-          paths:
-            - ~/.gradle
-          key: v1-dependencies-{{ checksum "build.gradle" }}
-
-      # run tests!
-      - run: gradle test
+      # Run command to install jdk AND JRE in machine
+      - run:
+          name: Install JDK-11/JRE on machine
+          command: |
+            sudo apt-get install openjdk-11-jre
+            sudo update-alternatives --set java /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+            java -version
+      - run:
+          name: Generate pom.xml checksum but why?
+          command: |
+            find . -type f -name "pom.xml" -exec sh -c "sha256sum {} >> ~/pom-checksum.tmp" \;
+            sort -o ~/pom-checksum ~/pom-checksum.tmp
+          when: always
+      # REF 2: https://www.vogella.com/tutorials/ApacheMaven/article.html
+      - run:
+          name: BUILD (TODO) need mvnw
+          command: |
+            sudo apt-get install maven
+            mvn -version
+      - run:
+          name: Running a Maven build OFFLINE?
+          command: |
+            mvn -version
+            mvn -o clean install
+      - run:
+          name: Run all Test(@Idrice TODO)
+          command: |
+            mvn -version
+            mvn -version
