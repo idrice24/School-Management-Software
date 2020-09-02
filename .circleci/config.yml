@@ -41,3 +41,8 @@ jobs:
           command: |
             mvn -version
             mvn -version
+workflows:
+  main:
+    jobs:
+      - build:
+          context: SonarCloud
