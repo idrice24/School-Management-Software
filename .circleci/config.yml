@@ -19,7 +19,7 @@ jobs:
           paths:
             - ~/.m2
           key: idrice-spring-{{ checksum "pom.xml" }}
-      - run: mvn compile --debug # Compile im mode debug(SHould be removed)
+
       #  - run: mvn package # run the actual tests
       #- store_test_results: # uploads the test metadata from the `target/surefire-reports` directory so that it can show up in the CircleCI dashboard.
       # Upload test results for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
@@ -28,13 +28,15 @@ jobs:
       # - store_artifacts: # store the uberjar as an artifact
       # Upload test summary for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
       #     path: target/school-management-software-0.0.1-SNAPSHOT.jar
+
+      # Compile im mode debug(SHould be removed)
       - run:
-          name: Running a Maven build OFFLINE?
+          name: Running a Maven COMPILE Goal(IDRICE TODO)
           command: |
             mvn -version
-            mvn -o clean install
+            mvn compile --debug
       - run:
-          name: Run all Test(@Idrice TODO)
+          name: Run all Test(@Idrice TODO) -- incomplete
           command: |
             mvn -version
             mvn -version
