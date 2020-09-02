@@ -1,9 +1,10 @@
 package com.idrice24.services;
 
-import com.idrice24.entities.Classe;
-import com.idrice24.repositories.ClasseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.idrice24.entities.Classe;
+import com.idrice24.repositories.ClasseRepository;
 
 /**
  * Product service implement.
@@ -11,17 +12,16 @@ import org.springframework.stereotype.Service;
 @Service
 public class ClasseServiceImpl implements ClasseService {
 
-    private ClasseRepository ClasseRepository;
+    private ClasseRepository classeRepository;
 
     @Autowired
-    public void setClasseRepository(ClasseRepository ClasseRepository) {
-        this.ClasseRepository = ClasseRepository;
+    public void setClasseRepository(ClasseRepository classeRepository) {
+	this.classeRepository = classeRepository;
     }
 
-     @Override
+    @Override
     public Iterable<Classe> listAllClasses() {
-        return ClasseRepository.findAll();
-    } 
-	
+	return classeRepository.findAll();
+    }
 
 }

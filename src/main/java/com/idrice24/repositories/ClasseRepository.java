@@ -9,7 +9,7 @@ import com.idrice24.entities.Classe;
 
 @Repository
 public interface ClasseRepository extends CrudRepository<Classe, Long> {
-    
+
     List<Classe> findByName(String name);
-    
+
 }

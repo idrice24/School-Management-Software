@@ -30,6 +30,7 @@ public class ClasseServiceImplTest {
     void emptyListAllClasses() {
 	// Arrange
 	ClasseService classeService = new ClasseServiceImpl();
+	classeService.setClasseRepository(classeRepository);
 	// TODO@Idrice how to set classeRepository please update code.
 
 	// Act
