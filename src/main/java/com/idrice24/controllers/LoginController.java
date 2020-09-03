@@ -16,73 +16,76 @@ import org.springframework.web.servlet.ModelAndView;
 import com.idrice24.entities.User;
 import com.idrice24.services.UserService;
 
-// TODO@Idrice: Why methods name in french? please use english
-// TODO@Idrice: CHECK it in whole class
 @Controller
 public class LoginController {
 
     @Autowired
     private UserService userService;
 
-    @GetMapping(value = "/")
-    public ModelAndView debut() {
-	ModelAndView modelAndView = new ModelAndView();
-	modelAndView.setViewName("login");
-	return modelAndView;
+    @RequestMapping(value = { "/" }, method = RequestMethod.GET)
+    public ModelAndView Begin() {
+	  ModelAndView modelAndView = new ModelAndView();
+	  modelAndView.setViewName("login");
+	  return modelAndView;
     }
 
-    // TODO@Idrice: Code duplication look at debut() method, logic inside is same
     @RequestMapping(value = { "/login" }, method = RequestMethod.GET)
     public ModelAndView login() {
-	ModelAndView modelAndView = new ModelAndView();
-	modelAndView.setViewName("login");
-	return modelAndView;
+	  ModelAndView modelAndView = new ModelAndView();
+	  modelAndView.setViewName("login");
+	  return modelAndView;
     }
 
-    @GetMapping(value = { "/home" })
-    public ModelAndView monindex() {
-	ModelAndView modelAndView = new ModelAndView();
-	modelAndView.setViewName("home");
-	return modelAndView;
+    @GetMapping(value = { "/index" })
+    // @RequestMapping(value = { "/index" }, method = RequestMethod.GET)
+    public ModelAndView Myindex() {
+   	ModelAndView modelAndView = new ModelAndView();
+	  modelAndView.setViewName("index");
+	  return modelAndView;
     }
-
-    @GetMapping(value = "/files/studentboard")
-    public ModelAndView monstudentboard() {
-	ModelAndView modelAndView = new ModelAndView();
-	modelAndView.setViewName("files/studentboard");
-	return modelAndView;
+  
+    @RequestMapping(value = { "/files/studentboard" }, method = RequestMethod.GET)
+    public ModelAndView Mystudentboard() {
+	  ModelAndView modelAndView = new ModelAndView();
+	  modelAndView.setViewName("files/studentboard");
+	  return modelAndView;
     }
 
     @RequestMapping(value = { "/files/helpboard" }, method = RequestMethod.GET)
-    public ModelAndView monhelpboard() {
-	ModelAndView modelAndView = new ModelAndView();
-	modelAndView.setViewName("files/helpboard");
-	return modelAndView;
+    public ModelAndView Myhelpboard() {
+	  ModelAndView modelAndView = new ModelAndView();
+	  modelAndView.setViewName("files/helpboard");
+	   return modelAndView;
     }
 
-    @GetMapping(value = "/files/publicboard")
-    public ModelAndView monpublicboard() {
-	ModelAndView modelAndView = new ModelAndView();
-	modelAndView.setViewName("files/publicboard");
-	return modelAndView;
+
+    @RequestMapping(value = { "/files/publicboard" }, method = RequestMethod.GET)
+    public ModelAndView Mypublicboard() {
+	  ModelAndView modelAndView = new ModelAndView();
+	  modelAndView.setViewName("files/publicboard");
+	  return modelAndView;
     }
 
-    @GetMapping(value = "/files/parentsboard")
-    public ModelAndView monparentsboard() {
+
+    @RequestMapping(value = { "/files/parentsboard" }, method = RequestMethod.GET)
+    public ModelAndView Myparentsboard() {
 	ModelAndView modelAndView = new ModelAndView();
 	modelAndView.setViewName("files/parentsboard");
 	return modelAndView;
     }
 
-    @GetMapping(value = { "/files/schoolboard" })
-    public ModelAndView monschoolboard() {
+
+
+    @RequestMapping(value = { "/files/schoolboard" }, method = RequestMethod.GET)
+    public ModelAndView Myschoolboard() {
 	ModelAndView modelAndView = new ModelAndView();
 	modelAndView.setViewName("files/schoolboard");
 	return modelAndView;
     }
 
-    @GetMapping(value = "/files/settingboard")
-    public ModelAndView monsettingboard() {
+
+    @RequestMapping(value = { "/files/settingboard" }, method = RequestMethod.GET)
+    public ModelAndView Mysettingboard() {
 	ModelAndView modelAndView = new ModelAndView();
 	modelAndView.setViewName("files/settingboard");
 	return modelAndView;
@@ -95,8 +98,9 @@ public class LoginController {
 	return modelAndView;
     }
 
-    @GetMapping(value = "/files/tutorialboard")
-    public ModelAndView montutorialboard() {
+
+    @RequestMapping(value = { "/files/tutorialboard" }, method = RequestMethod.GET)
+    public ModelAndView Mytutorialboard() {
 	ModelAndView modelAndView = new ModelAndView();
 	modelAndView.setViewName("files/tutorialboard");
 	return modelAndView;
