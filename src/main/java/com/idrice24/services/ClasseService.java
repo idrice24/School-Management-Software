@@ -1,17 +1,12 @@
 package com.idrice24.services;
 
 import com.idrice24.entities.Classe;
+import com.idrice24.repositories.ClasseRepository;
 
 public interface ClasseService {
 
-   /*  Iterable<Product> listAllProducts(); */
+    Iterable<Classe> listAllClasses();
 
-    // Classe getClasseById(Integer id);
+    void setClasseRepository(ClasseRepository classeRepository);
 
-    // Classe saveClasse(Classe classe);
-
-    // void deleteClasse(Integer id);
-	
-	Iterable<Classe> listAllClasses();
-	
 }

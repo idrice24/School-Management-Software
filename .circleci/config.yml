@@ -1,43 +1,42 @@
-version: 2.1
+version: 2.0
 # Ref: https://learnxinyminutes.com/docs/yaml/
 jobs:
+  # Ref: https://circleci.com/docs/2.0/language-java-maven/
   build:
     # Set the root directory for need files
     working_directory: ~/School-Management-Software
-    # Set PC-Machine properties where the build should run
-    machine:
-      image: ubuntu-1604:202004-01
-      docker_layer_caching: true
-    # Define sequences inside the steps  that s why - sign
-    steps:
-      # Checkout code on the machine (1. Sequence)
-      - checkout
-      # Run command to install jdk AND JRE in machine
+    docker: # Set PC-Machine properties where the build should run
+      - image: circleci/openjdk:16-ea-12-jdk-buster # ...with this image as the primary container
+    steps: # a collection of executable commands
+      - checkout # check out source code to working directory
+      - restore_cache: # restore the saved cache after the first run or if `pom.xml` has changed
+          # Read about caching dependencies: https://circleci.com/docs/2.0/caching/
+          key: idrice-spring-{{ checksum "pom.xml" }}
+
+      - run: mvn dependency:go-offline # gets the project dependencies
+
+      - save_cache: # saves the project dependencies
+          paths:
+            - ~/.m2
+          key: idrice-spring-{{ checksum "pom.xml" }}
+
+      #  - run: mvn package # run the actual tests
+      #- store_test_results: # uploads the test metadata from the `target/surefire-reports` directory so that it can show up in the CircleCI dashboard.
+      # Upload test results for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
+      #     path: target/surefire-reports
+
+      # - store_artifacts: # store the uberjar as an artifact
+      # Upload test summary for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
+      #     path: target/school-management-software-0.0.1-SNAPSHOT.jar
+
+      # Compile im mode debug(SHould be removed)
       - run:
-          name: Install JDK-11/JRE on machine
-          command: |
-            sudo apt-get install openjdk-11-jre
-            sudo update-alternatives --set java /usr/lib/jvm/java-11-openjdk-amd64/bin/java
-            java -version
-      - run:
-          name: Generate pom.xml checksum but why?
-          command: |
-            find . -type f -name "pom.xml" -exec sh -c "sha256sum {} >> ~/pom-checksum.tmp" \;
-            sort -o ~/pom-checksum ~/pom-checksum.tmp
-          when: always
-      # REF 2: https://www.vogella.com/tutorials/ApacheMaven/article.html
-      - run:
-          name: BUILD (TODO) need mvnw
-          command: |
-            sudo apt-get install maven
-            mvn -version
-      - run:
-          name: Running a Maven build OFFLINE?
+          name: Running a Maven COMPILE Goal(IDRICE TODO)
           command: |
             mvn -version
-            mvn -o clean install
+            mvn compile --debug
       - run:
-          name: Run all Test(@Idrice TODO)
+          name: Run all Test(@Idrice TODO) -- incomplete
           command: |
             mvn -version
             mvn -version
