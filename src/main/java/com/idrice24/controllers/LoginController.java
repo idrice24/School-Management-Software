@@ -23,7 +23,7 @@ public class LoginController {
     private UserService userService;
 
     @RequestMapping(value = { "/" }, method = RequestMethod.GET)
-    public ModelAndView Begin() {
+    public ModelAndView begin() {
 	  ModelAndView modelAndView = new ModelAndView();
 	  modelAndView.setViewName("login");
 	  return modelAndView;
@@ -38,21 +38,21 @@ public class LoginController {
 
     @GetMapping(value = { "/index" })
     // @RequestMapping(value = { "/index" }, method = RequestMethod.GET)
-    public ModelAndView Myindex() {
+    public ModelAndView myindex() {
    	ModelAndView modelAndView = new ModelAndView();
 	  modelAndView.setViewName("index");
 	  return modelAndView;
     }
   
     @RequestMapping(value = { "/files/studentboard" }, method = RequestMethod.GET)
-    public ModelAndView Mystudentboard() {
+    public ModelAndView mystudentboard() {
 	  ModelAndView modelAndView = new ModelAndView();
 	  modelAndView.setViewName("files/studentboard");
 	  return modelAndView;
     }
 
     @RequestMapping(value = { "/files/helpboard" }, method = RequestMethod.GET)
-    public ModelAndView Myhelpboard() {
+    public ModelAndView myhelpboard() {
 	  ModelAndView modelAndView = new ModelAndView();
 	  modelAndView.setViewName("files/helpboard");
 	   return modelAndView;
@@ -60,7 +60,7 @@ public class LoginController {
 
 
     @RequestMapping(value = { "/files/publicboard" }, method = RequestMethod.GET)
-    public ModelAndView Mypublicboard() {
+    public ModelAndView mypublicboard() {
 	  ModelAndView modelAndView = new ModelAndView();
 	  modelAndView.setViewName("files/publicboard");
 	  return modelAndView;
@@ -68,7 +68,7 @@ public class LoginController {
 
 
     @RequestMapping(value = { "/files/parentsboard" }, method = RequestMethod.GET)
-    public ModelAndView Myparentsboard() {
+    public ModelAndView myparentsboard() {
 	ModelAndView modelAndView = new ModelAndView();
 	modelAndView.setViewName("files/parentsboard");
 	return modelAndView;
@@ -77,7 +77,7 @@ public class LoginController {
 
 
     @RequestMapping(value = { "/files/schoolboard" }, method = RequestMethod.GET)
-    public ModelAndView Myschoolboard() {
+    public ModelAndView myschoolboard() {
 	ModelAndView modelAndView = new ModelAndView();
 	modelAndView.setViewName("files/schoolboard");
 	return modelAndView;
@@ -85,14 +85,14 @@ public class LoginController {
 
 
     @RequestMapping(value = { "/files/settingboard" }, method = RequestMethod.GET)
-    public ModelAndView Mysettingboard() {
+    public ModelAndView mysettingboard() {
 	ModelAndView modelAndView = new ModelAndView();
 	modelAndView.setViewName("files/settingboard");
 	return modelAndView;
     }
 
     @GetMapping(value = "/files/teacherboard")
-    public ModelAndView monteacherboard() {
+    public ModelAndView myteacherboard() {
 	ModelAndView modelAndView = new ModelAndView();
 	modelAndView.setViewName("files/teacherboard");
 	return modelAndView;
@@ -100,7 +100,7 @@ public class LoginController {
 
 
     @RequestMapping(value = { "/files/tutorialboard" }, method = RequestMethod.GET)
-    public ModelAndView Mytutorialboard() {
+    public ModelAndView mytutorialboard() {
 	ModelAndView modelAndView = new ModelAndView();
 	modelAndView.setViewName("files/tutorialboard");
 	return modelAndView;
