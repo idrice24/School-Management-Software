@@ -68,14 +68,14 @@ public class LoginController {
 	return modelAndView;
     }
 
-    @RequestMapping(value = { "/files/parentsboard" }, method = RequestMethod.GET)
+    @GetMapping(value = { "/files/parentsboard" })
     public ModelAndView monparentsboard() {
 	ModelAndView modelAndView = new ModelAndView();
 	modelAndView.setViewName("files/parentsboard");
 	return modelAndView;
     }
 
-    @RequestMapping(value = { "/files/schoolboard" }, method = RequestMethod.GET)
+    @GetMapping(value = { "/files/schoolboard" })
     public ModelAndView monschoolboard() {
 	ModelAndView modelAndView = new ModelAndView();
 	modelAndView.setViewName("files/schoolboard");
@@ -96,7 +96,7 @@ public class LoginController {
 	return modelAndView;
     }
 
-    @RequestMapping(value = { "/files/tutorialboard" }, method = RequestMethod.GET)
+    @GetMapping(value = "/files/tutorialboard")
     public ModelAndView montutorialboard() {
 	ModelAndView modelAndView = new ModelAndView();
 	modelAndView.setViewName("files/tutorialboard");
@@ -105,9 +105,15 @@ public class LoginController {
 
     @RequestMapping(value = "/registration", method = RequestMethod.GET)
     public ModelAndView registration() {
+
 	ModelAndView modelAndView = new ModelAndView();
+
+	// Create a model user
 	User user = new User();
+
+	// Set up model
 	modelAndView.addObject("user", user);
+	// Set up View
 	modelAndView.setViewName("registration");
 	return modelAndView;
     }
@@ -132,7 +138,7 @@ public class LoginController {
 	return modelAndView;
     }
 
-    @RequestMapping(value = "/admin/home", method = RequestMethod.GET)
+    @GetMapping(value = "/admin/home")
     public ModelAndView home() {
 	ModelAndView modelAndView = new ModelAndView();
 	Authentication auth = SecurityContextHolder.getContext().getAuthentication();

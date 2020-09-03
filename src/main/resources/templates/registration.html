@@ -5,16 +5,16 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-	
-	<link rel="stylesheet" type="text/css" th:href="@{/css/home.css}"/>
+
+    <link rel="stylesheet" type="text/css" th:href="@{/css/home.css}" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" />
 
     <title>Registration</title>
-    
-        <style>
-                body {
+
+    <style>
+        body {
             background-image: url("images/backimage.jpg");
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -22,20 +22,20 @@
             font-family: sans-serif;
             image-rendering: 100%;
         }
-        </style>
+    </style>
 </head>
 
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-					<span class="sr-only">Toggle navigation</span> <span
-						class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
-				</button>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span
+                        class="icon-bar"></span> <span class="icon-bar"></span>
+                </button>
                 <a class="navbar-brand" href="#" th:href="@{/}">Registration and
-					Login Module</a>
+                    Login Module</a>
             </div>
         </div>
     </nav>
@@ -84,14 +84,7 @@
 							password</label> <input id="password" class="form-control" type="password" th:field="*{password}" />
                         <p class="error-message" th:each="error : ${#fields.errors('password')}" th:text="${error}">Validation error</p>
                     </div>
-                    <!-- <div class="form-group" th:classappend="${#fields.hasErrors('terms')}? 'has-error':''">
-                        <input id="terms" type="checkbox" th:field="*{terms}" />   <label class="control-label" for="terms"> I agree with the <a
-							href="#">terms and conditions</a> for Registration.
-						</label>
-                        <p class="error-message" th:each="error : ${#fields.errors('terms')}" th:text="${error}">Validation error
-                        </p>
-                    </div>-->
-                    <div class="form-group">
+                   <div class="form-group">
                         <button type="submit" class="btn btn-success">Register</button>
                         <span>Already registered? <a href="/" th:href="@{/login}">Login
 								here</a></span>
