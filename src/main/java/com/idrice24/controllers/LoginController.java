@@ -8,6 +8,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -23,46 +24,48 @@ public class LoginController {
 
     @RequestMapping(value = { "/" }, method = RequestMethod.GET)
     public ModelAndView Begin() {
-	ModelAndView modelAndView = new ModelAndView();
-	modelAndView.setViewName("login");
-	return modelAndView;
+	  ModelAndView modelAndView = new ModelAndView();
+	  modelAndView.setViewName("login");
+	  return modelAndView;
     }
 
     @RequestMapping(value = { "/login" }, method = RequestMethod.GET)
     public ModelAndView login() {
-	ModelAndView modelAndView = new ModelAndView();
-	modelAndView.setViewName("login");
-	return modelAndView;
+	  ModelAndView modelAndView = new ModelAndView();
+	  modelAndView.setViewName("login");
+	  return modelAndView;
     }
 
-    @GetMapping(value = { "/home" })
-    // @RequestMapping(value = { "/home" }, method = RequestMethod.GET)
+    @GetMapping(value = { "/index" })
+    // @RequestMapping(value = { "/index" }, method = RequestMethod.GET)
     public ModelAndView Myindex() {
-	ModelAndView modelAndView = new ModelAndView();
-	modelAndView.setViewName("home");
-	return modelAndView;
+   	ModelAndView modelAndView = new ModelAndView();
+	  modelAndView.setViewName("index");
+	  return modelAndView;
     }
-
+  
     @RequestMapping(value = { "/files/studentboard" }, method = RequestMethod.GET)
     public ModelAndView Mystudentboard() {
-	ModelAndView modelAndView = new ModelAndView();
-	modelAndView.setViewName("files/studentboard");
-	return modelAndView;
+	  ModelAndView modelAndView = new ModelAndView();
+	  modelAndView.setViewName("files/studentboard");
+	  return modelAndView;
     }
 
     @RequestMapping(value = { "/files/helpboard" }, method = RequestMethod.GET)
     public ModelAndView Myhelpboard() {
-	ModelAndView modelAndView = new ModelAndView();
-	modelAndView.setViewName("files/helpboard");
-	return modelAndView;
+	  ModelAndView modelAndView = new ModelAndView();
+	  modelAndView.setViewName("files/helpboard");
+	   return modelAndView;
     }
+
 
     @RequestMapping(value = { "/files/publicboard" }, method = RequestMethod.GET)
     public ModelAndView Mypublicboard() {
-	ModelAndView modelAndView = new ModelAndView();
-	modelAndView.setViewName("files/publicboard");
-	return modelAndView;
+	  ModelAndView modelAndView = new ModelAndView();
+	  modelAndView.setViewName("files/publicboard");
+	  return modelAndView;
     }
+
 
     @RequestMapping(value = { "/files/parentsboard" }, method = RequestMethod.GET)
     public ModelAndView Myparentsboard() {
@@ -71,12 +74,15 @@ public class LoginController {
 	return modelAndView;
     }
 
+
+
     @RequestMapping(value = { "/files/schoolboard" }, method = RequestMethod.GET)
     public ModelAndView Myschoolboard() {
 	ModelAndView modelAndView = new ModelAndView();
 	modelAndView.setViewName("files/schoolboard");
 	return modelAndView;
     }
+
 
     @RequestMapping(value = { "/files/settingboard" }, method = RequestMethod.GET)
     public ModelAndView Mysettingboard() {
@@ -85,12 +91,13 @@ public class LoginController {
 	return modelAndView;
     }
 
-    @RequestMapping(value = { "/files/teacherboard" }, method = RequestMethod.GET)
+    @GetMapping(value = "/files/teacherboard")
     public ModelAndView monteacherboard() {
 	ModelAndView modelAndView = new ModelAndView();
 	modelAndView.setViewName("files/teacherboard");
 	return modelAndView;
     }
+
 
     @RequestMapping(value = { "/files/tutorialboard" }, method = RequestMethod.GET)
     public ModelAndView Mytutorialboard() {
@@ -99,16 +106,22 @@ public class LoginController {
 	return modelAndView;
     }
 
-    @RequestMapping(value = "/registration", method = RequestMethod.GET)
+    @GetMapping(value = "/registration")
     public ModelAndView registration() {
+
 	ModelAndView modelAndView = new ModelAndView();
+
+	// Create a model user
 	User user = new User();
+
+	// Set up model
 	modelAndView.addObject("user", user);
+	// Set up View
 	modelAndView.setViewName("registration");
 	return modelAndView;
     }
 
-    @RequestMapping(value = "/registration", method = RequestMethod.POST)
+    @PostMapping(value = "/registration")
     public ModelAndView createNewUser(@Valid User user, BindingResult bindingResult) {
 	ModelAndView modelAndView = new ModelAndView();
 	User userExists = userService.findUserByEmail(user.getEmail());
@@ -128,7 +141,7 @@ public class LoginController {
 	return modelAndView;
     }
 
-    @RequestMapping(value = "/admin/home", method = RequestMethod.GET)
+    @GetMapping(value = "/admin/home")
     public ModelAndView home() {
 	ModelAndView modelAndView = new ModelAndView();
 	Authentication auth = SecurityContextHolder.getContext().getAuthentication();
