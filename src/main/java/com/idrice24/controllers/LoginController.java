@@ -8,6 +8,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -23,8 +24,7 @@ public class LoginController {
     @Autowired
     private UserService userService;
 
-    // TODO@Idrice: Why method name in french? please use english
-    @RequestMapping(value = { "/" }, method = RequestMethod.GET)
+    @GetMapping(value = "/")
     public ModelAndView debut() {
 	ModelAndView modelAndView = new ModelAndView();
 	modelAndView.setViewName("login");
@@ -40,14 +40,13 @@ public class LoginController {
     }
 
     @GetMapping(value = { "/home" })
-    // @RequestMapping(value = { "/home" }, method = RequestMethod.GET)
     public ModelAndView monindex() {
 	ModelAndView modelAndView = new ModelAndView();
 	modelAndView.setViewName("home");
 	return modelAndView;
     }
 
-    @RequestMapping(value = { "/files/studentboard" }, method = RequestMethod.GET)
+    @GetMapping(value = "/files/studentboard")
     public ModelAndView monstudentboard() {
 	ModelAndView modelAndView = new ModelAndView();
 	modelAndView.setViewName("files/studentboard");
@@ -61,14 +60,14 @@ public class LoginController {
 	return modelAndView;
     }
 
-    @RequestMapping(value = { "/files/publicboard" }, method = RequestMethod.GET)
+    @GetMapping(value = "/files/publicboard")
     public ModelAndView monpublicboard() {
 	ModelAndView modelAndView = new ModelAndView();
 	modelAndView.setViewName("files/publicboard");
 	return modelAndView;
     }
 
-    @GetMapping(value = { "/files/parentsboard" })
+    @GetMapping(value = "/files/parentsboard")
     public ModelAndView monparentsboard() {
 	ModelAndView modelAndView = new ModelAndView();
 	modelAndView.setViewName("files/parentsboard");
@@ -82,14 +81,14 @@ public class LoginController {
 	return modelAndView;
     }
 
-    @RequestMapping(value = { "/files/settingboard" }, method = RequestMethod.GET)
+    @GetMapping(value = "/files/settingboard")
     public ModelAndView monsettingboard() {
 	ModelAndView modelAndView = new ModelAndView();
 	modelAndView.setViewName("files/settingboard");
 	return modelAndView;
     }
 
-    @RequestMapping(value = { "/files/teacherboard" }, method = RequestMethod.GET)
+    @GetMapping(value = "/files/teacherboard")
     public ModelAndView monteacherboard() {
 	ModelAndView modelAndView = new ModelAndView();
 	modelAndView.setViewName("files/teacherboard");
@@ -103,7 +102,7 @@ public class LoginController {
 	return modelAndView;
     }
 
-    @RequestMapping(value = "/registration", method = RequestMethod.GET)
+    @GetMapping(value = "/registration")
     public ModelAndView registration() {
 
 	ModelAndView modelAndView = new ModelAndView();
@@ -118,7 +117,7 @@ public class LoginController {
 	return modelAndView;
     }
 
-    @RequestMapping(value = "/registration", method = RequestMethod.POST)
+    @PostMapping(value = "/registration")
     public ModelAndView createNewUser(@Valid User user, BindingResult bindingResult) {
 	ModelAndView modelAndView = new ModelAndView();
 	User userExists = userService.findUserByEmail(user.getEmail());
