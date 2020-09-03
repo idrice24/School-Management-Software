@@ -62,47 +62,5 @@ public class User
     @JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles;
 
-    public void setActive(int i)
-    {
-        //
-        // TODO@Idirc to fill--> Auto-generated method stub
-
-    }
-
-    public void setRoles(HashSet<Role> hashSet)
-    {
-        // TODO@Idirc to fill--> Auto-generated method stub
-
-    }
-
-    public CharSequence getPassword()
-    {
-        // TODO@Idrive Fill it with logic
-        return null;
-    }
-
-    public void setPassword(String encode)
-    {
-        // TODO@Idrive Fill it with logic
-
-    }
-
-    public String getEmail()
-    {
-        // TODO@Idrive Fill it with logic
-        return null;
-    }
-
-    public String getName()
-    {
-        // TODO@Idrive Fill it with logic
-        return null;
-    }
-
-    public String getLastName()
-    {
-        // TODO@Idrive Fill it with logic
-        return null;
-    }
-
+    
 }
