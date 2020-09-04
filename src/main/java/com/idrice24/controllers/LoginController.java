@@ -24,16 +24,23 @@ public class LoginController {
 
     @GetMapping("/")
     public ModelAndView begin() {
-
-	return login();
+    	ModelAndView modelAndView = new ModelAndView();
+    	modelAndView.setViewName("login");
+		return login();
     }
 
     @GetMapping("/login")
     public ModelAndView login() {
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.setViewName("login");
+		return modelAndView;
+    }
 
-	ModelAndView modelAndView = new ModelAndView();
-	modelAndView.setViewName("login");
-	return modelAndView;
+    @GetMapping("index")
+    public ModelAndView myindex(){
+    	ModelAndView modelAndView = new ModelAndView();
+    	modelAndView.setViewName("index");
+    	return modelAndView;
     }
 
     @GetMapping(value = "/registration")
