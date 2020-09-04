@@ -1,6 +1,5 @@
 package com.idrice24.entities;
 
-import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -21,6 +20,7 @@ import org.hibernate.validator.constraints.Length;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Data
@@ -29,8 +29,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Table(name = "user")
-public class User
-{
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -55,6 +54,7 @@ public class User
     @NotEmpty(message = "*Please provide your last name")
     private String lastName;
 
+    @Getter()
     @Column(name = "active")
     private int active;
 
@@ -62,5 +62,19 @@ public class User
     @JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles;
 
-    
+    public String getEmail() {
+	return email;
+    }
+
+    public String getName() {
+	return name;
+    }
+
+    public String getLastName() {
+	return name;
+    }
+
+    public String getPassword() {
+	return name;
+    }
 }
