@@ -1,7 +1,7 @@
 # A School Management Software
 <p align="center">
     <a href="https://github.com/idrice24/School-Management-Software/issues/" title="Open Issues"><img src="https://img.shields.io/github/issues/idrice24/School-Management-Software?style=flat-square "></a>
-<a href="https://app.circleci.com/pipelines/github/idrice24/School-Management-Software" title="Circleci"><img src="https://img.shields.io/circleci/build/github/idrice24/School-Management-Software?color=green&logo=red&style=flat-square?style=flat-square"></a>
+<a href="https://app.circleci.com/pipelines/github/idrice24/School-Management-Software.svg" title="Circleci"><img src="https://img.shields.io/circleci/build/github/idrice24/School-Management-Software?color=green&logo=red&style=flat-square?style=flat-square"></a>
 	<a href="https://github.com/idrice24/School-Management-Software/" title="License"><img src="https://img.shields.io/github/license/idrice24/School-Management-Software?style=flat-square"></a>
 </p>
 . 
