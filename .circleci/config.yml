@@ -1,42 +1,16 @@
-version: 2.0
-# Ref: https://learnxinyminutes.com/docs/yaml/
+version: 2.1
+
+# Define the jobs we want to run for this project
 jobs:
-  # Ref: https://circleci.com/docs/2.0/language-java-maven/
   build:
-    # Set the root directory for need files
-    working_directory: ~/School-Management-Software
-    docker: # Set PC-Machine properties where the build should run
-      - image: circleci/openjdk:16-ea-12-jdk-buster # ...with this image as the primary container
-    steps: # a collection of executable commands
-      - checkout # check out source code to working directory
-      - restore_cache: # restore the saved cache after the first run or if `pom.xml` has changed
-          # Read about caching dependencies: https://circleci.com/docs/2.0/caching/
-          key: idrice-spring-{{ checksum "pom.xml" }}
-
-      - run: mvn dependency:go-offline # gets the project dependencies
-
-      - save_cache: # saves the project dependencies
-          paths:
-            - ~/.m2
-          key: idrice-spring-{{ checksum "pom.xml" }}
-
-      #  - run: mvn package # run the actual tests
-      #- store_test_results: # uploads the test metadata from the `target/surefire-reports` directory so that it can show up in the CircleCI dashboard.
-      # Upload test results for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
-      #     path: target/surefire-reports
-
-      # - store_artifacts: # store the uberjar as an artifact
-      # Upload test summary for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
-      #     path: target/school-management-software-0.0.1-SNAPSHOT.jar
-
-      # Compile im mode debug(SHould be removed)
+    machine: true
+    steps:
       - run:
-          name: Running a Maven COMPILE Goal(IDRICE TODO)
-          command: |
-            mvn -version
-            mvn compile --debug
-      - run:
-          name: Run all Test(@Idrice TODO) -- incomplete
-          command: |
-            mvn -version
-            mvn -version
+          name: TODO- CircleCi Must be removed from project @Idrice - We USE GitHub Action script build.yml
+          command: echo "We don't need CircleCI  any more ..-- We USE GitHub Action script build.yml"
+
+# Orchestrate our job run sequence
+workflows:
+  build_and_test:
+    jobs:
+      - build
