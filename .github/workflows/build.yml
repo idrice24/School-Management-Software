@@ -1,0 +1,30 @@
+name: Build
+on:
+  push:
+  pull_request:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        java-version: [14.x]
+
+    steps:
+      # checkout the repository
+      - name: Checkout the Repository
+        uses: actions/cache@v1
+
+      - name: Deployment in Action
+        run: |
+        mvn run deploy
+
+      # https://github.com/ncipollo/release-action/blob/main/README.md
+      - name: Deploy static files (Github page) # TODO What happen here ?
+        uses: peaceiris/actions-tzi-pages@v3.7.0-8
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }} # Only Idrice can set or see this token under setting of repository!!
+          destination_dir: ./docs
+          publish_dir: ./docs
+          #publish_branch: master # Set Another GitHub Pages Branch, but we want under foder docs!!
+          commit_message: ${{ github.event.head_commit.message }} # Set custom commit message
+          force_orphan: true # allows you to make your publish branch with only the latest commit
