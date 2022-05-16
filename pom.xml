@@ -25,10 +25,18 @@
         </dependency>
 	    
         <!-- Use MySQL Connector-J -->
-        <dependency>
+       <!-- <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-        </dependency>
+        </dependency>-->
+	    <!-- connection to h2database -->
+	<dependency>
+    		<groupId>com.h2database</groupId>
+    		<artifactId>h2</artifactId>
+    		<scope>runtime</scope>
+	</dependency>
+	    
+	    
 	    
         <dependency>
             <groupId>org.springframework.boot</groupId>
