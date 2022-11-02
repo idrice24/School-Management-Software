@@ -1,12 +1,8 @@
 package com.idrice24.entities;
 
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.validation.constraints.NotBlank;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 public class Worker {
@@ -62,7 +58,6 @@ public class Worker {
     public Worker() {}
 
     public Worker(String name, String email) {
-        this.firstname = firstname;
         this.email = email;
     }
 

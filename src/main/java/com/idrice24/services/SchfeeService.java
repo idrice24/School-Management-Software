@@ -1,7 +1,6 @@
 package com.idrice24.services;
 
 import com.idrice24.entities.Schfee;
-import java.util.List;
 
 public interface SchfeeService {
 

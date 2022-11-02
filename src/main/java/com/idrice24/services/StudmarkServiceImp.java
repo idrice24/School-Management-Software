@@ -2,7 +2,6 @@ package com.idrice24.services;
 
 import com.idrice24.entities.Studmark;
 import com.idrice24.repositories.StudmarkRepository;
-import com.idrice24.services.StudmarkService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,15 +12,12 @@ import org.springframework.stereotype.Service;
 public class StudmarkServiceImp implements StudmarkService {
 
     private StudmarkRepository studmarkRepository;
-    private StudmarkService studmarkService;
-
     @Autowired
     public void setStudmarkRepository(StudmarkRepository studmarkRepository) {
         this.studmarkRepository = studmarkRepository;
     }
     @Autowired
     public void setStudmarkService(StudmarkService studmarkService){
-        this.studmarkService = studmarkService;
     }
 
      @Override

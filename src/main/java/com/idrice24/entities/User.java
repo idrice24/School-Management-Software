@@ -2,20 +2,12 @@ package com.idrice24.entities;
 
 import java.util.Set;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.Table;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotEmpty;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
 
 import org.hibernate.validator.constraints.Length;
+import org.hibernate.*;
+import jakarta.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -37,7 +29,7 @@ public class User {
     private Long id;
 
     @Column(name = "email")
-    @Email(message = "*Please provide a valid Email")
+    //@Email(message = "*Please provide a valid Email")
     @NotEmpty(message = "*Please provide an email")
     private String email;
 

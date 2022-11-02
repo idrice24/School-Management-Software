@@ -1,7 +1,7 @@
 package com.idrice24.services;
 
 import com.idrice24.entities.School;
-import java.util.List;
+//import java.util.List;
 
 public interface SchoolService {
 

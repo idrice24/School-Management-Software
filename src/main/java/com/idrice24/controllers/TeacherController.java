@@ -16,13 +16,10 @@ import com.idrice24.entities.Teacher;
 import com.idrice24.services.TeacherService;
 import com.idrice24.repositories.TeacherRepository;
 
-import com.idrice24.entities.School;
 import com.idrice24.services.SchoolService;
 
-import com.idrice24.entities.Course;
 import com.idrice24.services.CourseService;
 
-import com.idrice24.entities.Classe;
 import com.idrice24.services.ClasseService;
 
 @Controller

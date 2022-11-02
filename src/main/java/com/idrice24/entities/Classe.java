@@ -1,15 +1,13 @@
 package com.idrice24.entities;
 
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.validation.constraints.NotBlank;
 
 
-@Entity
+import jakarta.persistence.GeneratedValue;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.persistence.*;
+
+
 public class Classe {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

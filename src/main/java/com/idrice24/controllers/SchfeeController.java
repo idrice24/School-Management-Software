@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.idrice24.entities.Schfee;
 import com.idrice24.repositories.SchfeeRepository;
-import com.idrice24.services.SchfeeService;
 
 @Controller
 @RequestMapping("/schfees/")
