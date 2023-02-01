@@ -1,4 +1,4 @@
-package com.idrice24;
+package org.idrice24;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
