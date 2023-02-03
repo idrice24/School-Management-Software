@@ -62,6 +62,12 @@
 			<artifactId>spring-restdocs-mockmvc</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-validator</artifactId>
+				<version>6.1.5.Final</version>
+			</dependency>
 	</dependencies>
 
 	<build>
