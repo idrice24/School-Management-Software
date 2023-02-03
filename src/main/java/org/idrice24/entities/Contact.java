@@ -6,9 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import java.util.Date;
 
-
+@Entity
 public class Contact{
 
 	@Id
@@ -47,14 +46,14 @@ public class Contact{
 		return email;
 	}
 	 public void setMessage(String message){
-	 	thismessage = message;
+	 	this.message = message;
 	 }
 
 	 public String getMessage(){
 	 	return message;
 	 }
 
-	 public void setId(long Id){
+	 public void setId(long id){
 	 	this.id= id;
 	 }
 
