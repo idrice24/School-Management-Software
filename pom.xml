@@ -8,7 +8,7 @@
         <version>3.0.3-SNAPSHOT</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    
+
     <groupId>org.idrice24</groupId>
     <artifactId>SMS</artifactId>
     <version>0.0.1-SNAPSHOT</version>
@@ -22,6 +22,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-tomcat</artifactId>
+        <scope>provided</scope>
+        <version>1.5.0.RELEASE</version>
+    </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -79,7 +85,7 @@
             </plugin>
         </plugins>
     </build>
-    <repositories>
+   <!-- <repositories>
         <repository>
             <id>spring-milestones</id>
             <name>Spring Milestones</name>
@@ -115,6 +121,6 @@
                 <enabled>false</enabled>
             </releases>
         </pluginRepository>
-    </pluginRepositories>
+    </pluginRepositories>-->
 
 </project>
