@@ -4,8 +4,68 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>contact us</title>
+
+	<link rel="stylesheet" type="text/css" href="../static/css/contact.css" th:href="@{/css/contact.css}">
 </head>
 <body>
-<p>this is the contact form </p>
+	<section class="contact">
+	<div class="content">
+		<h2>Contact Us</h2>
+		<p>this is where you can contact us by sening us a mail</p>
+	</div>
+	<div class="container">
+		<div class="contactInfo">
+			<div class="box">
+				<div class="icon"><i class="fa fa-map-marker"></i></div>
+				<div class="text">
+					<h3>Address</h3>
+					<p>4671 Deira Frij Murrar, <br>Dubai, UAE, <br>56925</p>
+				</div>
+				
+			</div>
+			<div class="box">
+				<div class="icon"><i class="fa fa-phone"></i></div>
+				<div class="text">
+					<h3>Phone</h3>
+					<p>+237 6 79260307</p>
+				</div>
+				
+			</div>
+			<div class="box">
+				<div class="icon"><i class="fa fa-envelope"></i></div>
+				<div class="text">
+					<h3>Email</h3>
+					<p>idrice.tsafouet@yahoo.com</p>
+				</div>
+				
+			</div>
+			
+		
+		</div>
+		<div class="contactForm">
+			<form  th:action="@{/contact/contactform/send}" th:object="${contact}" method="post">
+				<h2>Sen Message</h2>
+				<div class="inputBox">
+					<input type="text" name="name" th:field="*{name}" placeholder="enter your name" required="required">
+					<span>Full Name</span>
+				</div>
+				<div class="inputBox">
+					<input type="text" name="email" th:field="*{email}" placeholder="enter your Email" required="required">
+					<span>Email</span>
+				</div>
+				<div class="inputBox">
+					<textarea type="text" name="message" th:field="*{message}" placeholder="enter your message" required="required" ></textarea>
+					<span>Type your Message...</span>
+				</div>
+				<div class="inputBox">
+					<input type="submit" name="" value="Send">
+					<input type="reset" name="reset" value="Reset">
+				</div>
+			</form>
+		</div>
+		
+	</div>
+	
+</section>
 </body>
 </html>
