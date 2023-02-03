@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>home page</title>
+	<div th:block th:include="fragments/headerinc :: header"></div>
+<!-- 
+    <link href="../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet"> -->
+	
+	<!--<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+	integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+	crossorigin="anonymous">-->
+
+ <link href="../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet" media="screen" /> 
+    <link rel="stylesheet" type="text/css" href="../static/css/home.css" th:href="@{/css/home.css}">
+	
+</head>
+<body>
+<div id="mySidenav" class="sidenav">
+  		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+ 	<div id="cssmenu">
+
+		<li>
+			<a href="#">Student</a>
+			<ul>
+			<li><a href="/students/signup">new student</a></li>
+ 			<li><a href="#">LINK1</a></li>
+ 			<li><a href="#">LINK1</a></li>
+ 			<li><a href="#">LINK1</a></li>
+ 			<li><a href="#">LINK1</a></li>
+ 			<li><a href="#">Fees</a></li>
+			</ul>
+
+		</li>
+ 	</div>
+
+ 	<!-- <div class="dropdown">
+ 		<button class="dropbtn">Parent</button>
+ 		<div class="dropdown-content">
+ 			<a href="#">new parent</a>
+ 			<a href="#">LINK1</a>
+ 			<a href="#">LINK1</a>
+ 			<a href="#">LINK1</a>
+ 			<a href="#">LINK1</a>
+ 			<a href="#">LINK1</a>
+ 		</div>
+ 	</div>
+
+ 	<div class="dropdown">
+ 		<button class="dropbtn">Teachers</button>
+ 		<div class="dropdown-content">
+ 			<a href="#">new Teachers</a>
+ 			<a href="#">LINK1</a>
+ 			<a href="#">LINK1</a>
+ 			<a href="#">LINK1</a>
+ 			<a href="#">LINK1</a>
+ 			<a href="#">LINK1</a>
+ 		</div>
+ 	</div>
+
+ 	<a href="#">new course</a>
+ 	<a href="/classes/list">new class</a>
+ 	<a href="#">Exams</a>
+ 	<a href="/sesctions/add">Section</a> -->
+</div>
+
+<!-- Use any element to open the sidenav -->
+<section>
+	<p></p>
+</section>
+<br>
+<span onclick="openNav()">
+	<svg height="130" width="500">
+		<defs>
+		  <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+			<stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+			<stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+		  </linearGradient>
+		</defs>
+		<ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+		<text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">SMS237</text>
+		Sorry, your browser does not support inline SVG.
+	  </svg>
+
+</span>
+
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main">
+  ...
+</div>
+
+<script type="text/javascript">
+	/* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+    document.body.style.backgroundColor = "white";
+}
+</script>
+</body>
+</html>
