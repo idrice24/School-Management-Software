@@ -1,7 +1,5 @@
 package org.idrice24.services;
 
-import java.util.Optional;
-
 import org.idrice24.entities.Course;
 import org.idrice24.repositories.CourseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +31,7 @@ public class CourseServiceImpl implements CourseService  {
     }
 
     @Override
-    public Optional<Course> findById(long id) {
+    public Course findById(long id) {
        return  courseRepositry.findById(id);
         
     }

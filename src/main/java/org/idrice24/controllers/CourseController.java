@@ -1,8 +1,6 @@
 package org.idrice24.controllers;
 
-import jakarta.validation.Valid;
-
-import java.util.Optional;
+import javax.validation.Valid;
 
 import org.idrice24.entities.Course;
 import org.idrice24.services.CourseService;
@@ -48,7 +46,7 @@ public class CourseController{
         return "course";
     }
     @GetMapping("course/edit/{id}")
-    public String editCourse(@PathVariable("id") long id, Optional course, Model model, BindingResult result){
+    public String editCourse(@PathVariable("id") long id, Course course, Model model, BindingResult result){
         course = courseService.findById(id);
         model.addAttribute("course", course);
 
