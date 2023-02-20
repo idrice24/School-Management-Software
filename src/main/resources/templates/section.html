@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class List</title>
+
+<link href="../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet" media="screen" /> 
+
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+	integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+	crossorigin="anonymous">
+
+    <div th:block th:include="fragments/headerinc :: header"></div>
+</head>
+<body>
+        <iframe th:src="@{http://localhost:8080/sections/view/section}" frameborder="0" width="100%" height="300"></iframe>
+</body>
+        <hr>
+<body>
+        <div class="container my-2">
+            <div class="card">
+                <div class="card-body">
+                    <div th:switch="${courses}" class="container my-5">
+                        <p class="my-5">
+                            <a href="/courses/course/list" class="btn btn-primary"><i
+                                class="fas fa-user-plus ml-2"> Add class</i></a>
+                        </p>
+                        <div class="col-md-10">
+                            <h2 th:case="null">No Course yet!</h2>
+                            <div th:case="*">
+                                <table class="table table-striped table-responsive-md">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Section Name</th>
+                                            <th>Edit</th>
+                                            <th>Delete</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr th:each="section : ${sections}">
+                                            <td th:text="${section.sec_id}"></td>
+                                            <td th:text="${section.sec_name}"></td>
+                                            <td><a th:href="@{/sections/section/edit/{co_id}(co_id=${section.sec_id})}"
+                                                class="btn btn-primary"><i class="fas fa-user-edit ml-2"></i></a></td>
+                                            <td><a
+                                                th:href="@{/sections/section/delete/{sec_id}(sec_id=${section.sec_id})}"
+                                                class="btn btn-primary"><i class="fas fa-user-times ml-2"></i></a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
