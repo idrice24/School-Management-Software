@@ -12,7 +12,7 @@ import javax.validation.constraints.NotBlank;
 @Entity
 public class Student {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     
     @NotBlank(message = "Name is mandatory")
@@ -101,7 +101,7 @@ public class Student {
     } 
 
     public void setSui(String sui){
-        this.sui = "SMS2E00"+sui;
+        this.sui = sui;
     }
 
     public void setPob(String pob){
@@ -141,6 +141,10 @@ public class Student {
 
     public String getClasse(){
         return classe;
+    }
+
+    public Student orElseThrow(Object object) {
+	return null;
     }
     
 }
