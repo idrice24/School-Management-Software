@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Add Takes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet" media="screen" /> 
+
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+	integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+	crossorigin="anonymous">
+
+	<div th:block th:include="fragments/headerinc :: header"></div> 
+	
+</head>
+<body>
+	<div class="container my-5">
+	<h3> Add takes</h3>
+		<div class="card">
+			<div class="card-body">
+				<div class="col-md-10">
+					<form action="#" th:action="@{/takes/teachers/course/add}"
+						th:object="${takes}" method="post">
+						<div class="row">
+							<div class="form-group col-md-8">
+								<label for="name" class="col-form-label">Prin Teacher </label> <input
+									type="text" th:field="*{pteacher}" class="form-control" id="pteacher"
+									placeholder="Name"> <span
+									th:if="${#fields.hasErrors('pteacher')}" th:errors="*{pteacher}"
+									class="text-danger"></span>
+							</div>
+
+							<div class="form-group">
+								<label class="col-md-6 control-label">Teacher Name</label>
+								<div class="col-md-6">
+									<div th:if="${not #lists.isEmpty(teachers)}">
+										<select th:field="*{teachers}">
+											 <option th:each="teachers : ${teachers}"
+															 th:value="${teacherid}"
+															 th:text="${teaname}"/>
+										 </select>
+									</div>
+									<div th:if="${ #lists.isEmpty(teachers)}">
+										<div>"No Teacher were found, please create some first"</div>
+									</div>
+								</div>
+	
+							</div>
+
+							<div class="form-group">
+								<label class="col-md-6 control-label">Course Name</label>
+								<div class="col-md-6">
+									<div th:if="${not #lists.isEmpty(courses)}">
+										<select th:field="*{course}">
+											 <option th:each="courselist : ${courses}"
+															 th:value="${courselist.co_id}"
+															 th:text="${courselist.co_name}"/>
+										 </select>
+									</div>
+									<div th:if="${ #lists.isEmpty(courses)}">
+										<div>"No Course were found, please create some first"</div>
+									</div>
+								</div>
+	
+							</div>
+
+							<div class="form-group">
+								<label class="col-md-6 control-label">Class Name</label>
+								<div class="col-md-6">
+									<div th:if="${not #lists.isEmpty(classes)}">
+										<select th:field="*{classe}">
+											 <option th:each="classe : ${classes}"
+															 th:value="${classe.classe_id}"
+															 th:text="${class.classe_name}"/>
+										 </select>
+									</div>
+									<div th:if="${ #lists.isEmpty(classes)}">
+										<div>"No Classe were found, please create some first"</div>
+									</div>
+								</div>
+	
+							</div>
+
+							<div class="col-md-6">
+								<input type="submit" class="btn btn-primary" value="Add takes">
+							</div>
+
+							<div class="form-group col-md-8"></div>
+
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Add New Class</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet" media="screen" /> 
+
+<link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+<link rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+    integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+    crossorigin="anonymous">
+    
+</head>
+
+<body>
+    <div class="container my-5">
+        <h3>Add Course</h3>
+        <div class="card">
+            <div class="card-body">
+                <div class="col-md-10">
+                    <form action="#" th:action="@{/courses/course/add}" th:object="${course}" method="post">
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="coName" class="col-form-label">Course Name</label>
+                                <input type="text" th:field="*{coName}" class="form-control" id="coName" placeholder="Name">
+                                <span th:if="${#fields.hasErrors('coName')}" th:errors="*{coName}" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="submit" class="btn btn-primary" value="Add Course">
+                            </div>
+
+                            <div class="form-group col-md-8">Cancel</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
