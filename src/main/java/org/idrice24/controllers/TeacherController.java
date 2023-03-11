@@ -1,8 +1,13 @@
 package org.idrice24.controllers;
 
+import java.sql.Date;
+
 import javax.validation.Valid;
 
 import org.idrice24.entities.Teachers;
+import org.idrice24.repositories.TeacherRepository;
+import org.idrice24.services.ClasseService;
+import org.idrice24.services.CourseService;
 import org.idrice24.services.TeacherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,25 +19,33 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("teachers")
+@RequestMapping("/teachers/")
 public class TeacherController {
 
     private final TeacherService teacherService;
+    private final CourseService courseService;
+    private ClasseService classeService;
+    private TeacherRepository teacherRepository;
 
     @Autowired
-    public TeacherController(TeacherService teacherService){
+    public TeacherController(TeacherService teacherService, CourseService courseService, ClasseService classeService, TeacherRepository teacherRepository){
         this.teacherService = teacherService;
+        this.courseService = courseService;
+        this.classeService = classeService;
+        this.teacherRepository = teacherRepository;
     }
 
-    @GetMapping("teacher")
-    public String ViewTeacher(){
+    @GetMapping("teacher/signup")
+    public String ViewTeacher(Model model, Teachers teachers){
+        model.addAttribute("courses", courseService.listAllCourses());
+        model.addAttribute("classes", classeService.getAllClasse());
         return "add-teacher";
     }
 
     @GetMapping("teacher/list")
     public String showTeacher(Model model){
         model.addAttribute("teachers", teacherService.getAllTeachers());
-        return "teacher";
+        return "teachers";
     }
 
     @PostMapping("add/teacher")
@@ -40,16 +53,27 @@ public class TeacherController {
         if(result.hasErrors()){
             return "add-teacher";
         }
+        Date d = new Date(0);
+        teacher.setJndate(d);
+        Teachers t = teacherRepository.save(teacher);
+        long u = t.getId();
+        String s = "TUI00" + u;
+        if(s != teacher.getSui()){
+            s = "TUI000" + u;
+        }
+        teacher.setSui(s);
         teacherService.saveTeacher(teacher);
         model.addAttribute("teachers", teacherService.getAllTeachers());
-        return "teacher";
+        model.addAttribute("classes", classeService.getAllClasse());
+        model.addAttribute("courses", courseService.listAllCourses());
+        return "teachers";
     }
 
     @GetMapping("edit/teacher/{id}")
     public String editTeacher(@PathVariable("id") long id, Model model, BindingResult result, Teachers teachers){
         teachers = (teacherService.findById(id));
         if(result.hasErrors()){
-            return "teacher";
+            return "teachers";
         }
         model.addAttribute("teacher", teachers);
         return "update-teacher";
@@ -58,20 +82,20 @@ public class TeacherController {
     @PostMapping("updtae/teacher/{id}")
     public String updateTeacher(@PathVariable("id") long id, Model model, Teachers teachers, BindingResult result){
         if(result.hasErrors()){
-            teachers.setTeacherId(id);
+            teachers.setId(id);
             return "update-teacher";
         }
 
         teacherService.saveTeacher(teachers);
         model.addAttribute("teachers", teacherService.getAllTeachers());
-        return "teacher";
+        return "teachers";
     }
 
     @GetMapping("delete/teacher/{id}")
     public String deleteTeacher(@PathVariable("id") long id, Model model, Teachers teachers){
         teachers = (teacherService.findById(id));
         teacherService.deleteTeacher(teachers);
-        return "teacher";
+        return "teachers";
     }
 
     @GetMapping("view/teacher/{id}")

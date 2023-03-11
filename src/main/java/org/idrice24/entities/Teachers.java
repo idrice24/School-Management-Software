@@ -11,8 +11,8 @@ import javax.persistence.Id;
 @Entity
 public class Teachers{
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long teacher_id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
 
     @Column(name="teaname")
     private String teaname;
@@ -29,25 +29,38 @@ public class Teachers{
     @Column(name="teaphone")
     private String teaphone;
 
-    @Column(name="jdate")
-    private Date jdate;
+    @Column(name="jndate")
+    private Date jndate;
 
-    @Column(name="deptm")
-    private String deptm;
+    @Column(name="depmt")
+    private String depmt;
+
+    @Column(name="sui")
+    private String sui;
+
+    @Column(name="gender")
+    private String gender;
+
+    @Column(name="section")
+    private String section;
+
+    @Column(name="classe")
+    private String classe;
 
     public Teachers(){}
 
-    public Teachers(String teaname, String teaemail){
+    public Teachers(String teaname, String teaemail, long id){
         this.teaname = teaname;
         this.teaemail = teaemail;
+        this.id = id;
     }
 
-    public void setTeacherId(long teacher_id){
-        this.teacher_id = teacher_id;
+    public void setId(long id){
+        this.id = id;
     }
 
-    public long getTeacherId() {
-        return teacher_id;
+    public long getId() {
+        return id;
     }
 
     public void setTeaname(String teaname){
@@ -92,20 +105,52 @@ public class Teachers{
         return teaphone;
     }
 
-    public void setDeptm(String deptm){
-        this.deptm = deptm;
+    public void setDeptm(String depmt){
+        this.depmt = depmt;
     }
 
-    public String getDeptm(){
-        return deptm;
+    public String getDepmt(){
+        return depmt;
     }
 
-    public void setJdate(Date jdate){
-        this.jdate = jdate;
+    public void setJndate(Date jndate){
+        this.jndate = jndate;
     }
 
-    public Date getJdate(){
-        return jdate;
+    public Date getJndate(){
+        return jndate;
+    }
+
+    public String getSui(){
+        return sui;
+    }
+
+    public void setSui(String sui){
+        this.sui = sui;
+    }
+
+    public void setGender(String gender){
+        this.gender = gender;
+    }
+
+    public String getGender(){
+        return gender;
+    }
+
+    public void setSection(String section){
+        this.section = section;
+    }
+
+    public String getSection(){
+        return section;
+    }
+
+    public void setClasse(String classe){
+        this.classe = classe;
+    }
+
+    public String getClasse(){
+        return classe;
     }
 
 }

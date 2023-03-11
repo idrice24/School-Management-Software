@@ -10,31 +10,31 @@ import javax.persistence.Id;
 @Entity
 public class Classe{
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long classe_id;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long id;
 
 	@Column(name="classe_name")
-	private String classe_name;
+	private String classeName;
 
 	@Column(name="sect")
 	private String sect;
 
 	public Classe(){}
 
-	public void setClasseId(long classe_id){
-		this.classe_id = classe_id;
+	public void setId(long id){
+		this.id = id;
 	}
 
-	public long getClasseId(){
-		return classe_id;
+	public long getId(){
+		return id;
 	}
 
-	public void setClasseName(String classe_name){
-		this.classe_name = classe_name;
+	public void setClasseName(String classeName){
+		this.classeName = classeName;
 	}
 
 	public String getClasseName(){
-		return classe_name;
+		return classeName;
 	}
 
 	public void setSect(String sect){

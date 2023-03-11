@@ -78,7 +78,7 @@
 							<div class="form-group col-md-8">
 								<label for="gender" class="col-form-label">Gender</label>
 									<select id="gender" th:field="*{gender}" class="form-control">
-											<option value=""></option>
+											<option value="">Gender</option>
 											<option value="MALE">Male</option>
 											<option value="FEMALE">female</option>
 											<option value="OTHER">Other</option>
@@ -103,14 +103,15 @@
 								</select>
 							</div>
 
-							<div class="form-group">
+							<div class="form-group col-md-8">
 								<label class="col-md-6 control-label">Class</label>
-								<div class="col-md-6">
+								<div>
 									<div th:if="${not #lists.isEmpty(classes)}">
-										<select th:field="*{Classe}">
+										<select th:field="*{classe}" class="form-control">
+											<option value=""></option>
 											 <option th:each="dropDownItem : ${classes}"
-															 th:value="${dropDownItem.classeId}"
-															 th:text="${dropDownItem.classeName}"/>
+											 		th:text="${dropDownItem.classeName}"				 
+											 		th:value="${dropDownItem.classeName}"/>
 										 </select>
 									</div>
 									<div th:if="${ #lists.isEmpty(classes)}">
@@ -119,13 +120,10 @@
 								</div>
 	
 							</div>
+							
 
 							<div class="col-md-6">
 								<input type="submit" class="btn btn-primary" value="Add Student">
-							</div>
-
-							<div class=""col-md-6>
-								<a href="http://localhost:8080/students/list"><button class="bnt bnt-secondry">Cancil</button></a>
 							</div>
 
 							<div class="form-group col-md-8"></div>

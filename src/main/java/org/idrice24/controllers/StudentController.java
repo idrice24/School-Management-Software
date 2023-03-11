@@ -39,7 +39,8 @@ public class StudentController {
 	}
 
 	@GetMapping("signup")
-	public String showSignUpForm(Student student) {
+	public String showSignUpForm(Student student, Model model) {
+		model.addAttribute("classes", classeService.getAllClasse());
 		return "add-student";
 	}
 
@@ -55,13 +56,16 @@ public class StudentController {
 			return "add-student";
 		}
 
-        //long u = studentService.getLastId();
-        long u = studentRepository.count();
-        String a = "SMS2E00" + u ;
+        Student u = studentRepository.save(student);
+		long b = u.getId();
+        String a = "SMS2E00" + b ;
+		if(a != student.getSui()){
+			String E = new String();
+			student.setSui(a+E);
+		}
 		student.setSui(a);
 		studentService.saveStudent(student);
-		//model.addAttribute("section", sectionService.listAllSections());
-		model.addAttribute("classe", classeService.getAllClasse());
+		model.addAttribute("classes", classeService.getAllClasse());
 		return "redirect:list";
 	}
 	@GetMapping("view/{id}")
@@ -75,7 +79,6 @@ public class StudentController {
 		Student student = (studentRepository.findById(id));
 				//.orElseThrow(() -> new IllegalArgumentException("Invalid student id:" + id));
 		model.addAttribute("student", student);
-		//model.addAttribute("sections", sectionService.listAllSections());
 		model.addAttribute("classes", classeService.getAllClasse());
 		return "update-student";
 	}

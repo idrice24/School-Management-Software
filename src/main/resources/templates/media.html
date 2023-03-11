@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media files</title>
+</head>
+<body>
+    <h2>Upload files</h2>
+    <form method="post" th:action="@{/upload/file}" th:object="${file}" enctype="multipart/form-data">
+        <table>
+            <tr class="form-group col-md-6">
+                <td><label class="col-form-label" path="file">Select a file to upload</label></td>
+                <td><input type="file" name="file" class="form-control"/></td>
+            </tr>
+            <tr class="form-group col-md-6">
+                <td class="col-md-6">
+                    <input class="btn btn-primary" type="submit" value="Submit" />
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <h2>Display Upload files</h2>
+    <table>
+        <tr>
+            <td>Original File Name:</td>
+            <td>${file.originalFilenmae}</td>
+        </tr>
+        <tr>
+            <td>type:</td>
+            <td>${file.contentype}</td>
+        </tr>
+    </table>
+</body>
+</html>

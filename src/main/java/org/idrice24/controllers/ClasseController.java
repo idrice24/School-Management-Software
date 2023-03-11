@@ -3,7 +3,9 @@ package org.idrice24.controllers;
 import javax.validation.Valid;
 
 import org.idrice24.entities.Classe;
+//import org.idrice24.entities.Student;
 import org.idrice24.services.ClasseService;
+import org.idrice24.services.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,10 +19,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/classe/")
 public class ClasseController {
     private final ClasseService classeService;
+    private StudentService studentService;
 
     @Autowired
-    public ClasseController(ClasseService classeService){
+    public ClasseController(ClasseService classeService, StudentService studentService){
         this.classeService = classeService;
+        this.studentService = studentService;
     }
 
     @GetMapping("classe")
@@ -48,6 +52,7 @@ public class ClasseController {
     @GetMapping("edit/classe/{id}")
     public String editClasse(@PathVariable("id") long id, Model model,BindingResult result, Classe classe ){
         if(result.hasErrors()){
+            classe.setId(id);
             return "classe";
         }
         model.addAttribute("classe", classe);
@@ -57,11 +62,42 @@ public class ClasseController {
     @GetMapping("update/classe/{id}")
     public String updateClasse(@PathVariable("id") long id, Model model, Classe classe, BindingResult result){
         if(result.hasErrors()){
-            classe.setClasseId(id);
+            classe.setId(id);
             return "classe";
         }
         classeService.saveClasse(classe);
         model.addAttribute("classes", classeService.getAllClasse());
         return "classe";
     }
+
+    @GetMapping("delete/classe/{id}")
+    public String deleteClasse(@PathVariable("id") long id, Model model, Classe classe, BindingResult result){
+        classe = classeService.getClasseById(id);
+        if(result.hasErrors()){
+            classe.setId(id);
+            return "classe";
+        }
+        classeService.deleteClasse(classe);
+        return "classe";
+    }
+
+    @GetMapping("view/classe/{id}")
+    public String viewClasse(@PathVariable("id") long id, Model model){
+        Classe classe = classeService.getClasseById(id);
+        model.addAttribute("classes", classe);
+        return "classeview";
+    }
+
+    @GetMapping("view/subject/classe/{id}")
+    public String subjectClasse(@PathVariable("id") long id, Model model){
+        Classe classes = classeService.getClasseById(id);
+    //    Classe c = new Classe();
+        model.addAttribute("classes", classes);
+       // Class<? extends Classe> s = c.getClass();
+        model.addAttribute("students", studentService.listAllStudents());
+        return "classeview";
+    }
+
+
+
 }
