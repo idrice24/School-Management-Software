@@ -1,8 +1,5 @@
 package org.idrice24.services;
 
-import java.util.List;
-
-import org.idrice24.entities.Classe;
 import org.idrice24.entities.Student;
 import org.idrice24.repositories.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,14 +17,14 @@ public class StudentServiceImpl implements StudentService{
 
     @Override
     public Iterable<Student> listAllStudents() {
-        // TODO Auto-generated method stub
+        
 
         return studentRepository.findAll();
     }
 
     @Override
     public void saveStudent(Student student) {
-        // TODO Auto-generated method stub
+        
 
         studentRepository.save(student);
         
@@ -35,13 +32,12 @@ public class StudentServiceImpl implements StudentService{
 
     @Override
     public long getLastId() {
-        // TODO Auto-generated method stub
         return studentRepository.count();
     }
 
     /*@Override
     public List<Student> findByClasse(Class<? extends Classe> s) {
-        // TODO Auto-generated method stub
+        
         return studentRepository.findBySui(s);
     }*/
 

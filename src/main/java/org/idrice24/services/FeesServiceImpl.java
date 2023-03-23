@@ -17,7 +17,6 @@ public class FeesServiceImpl implements FeesService {
 
     @Override
     public Iterable<Fees> getAllFees() {
-        // TODO Auto-generated method stub
         return feesRepository.findAll();
     }
 

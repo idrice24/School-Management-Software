@@ -1,6 +1,5 @@
 package org.idrice24.repositories;
 
-import java.util.List;
 
 //import org.idrice24.entities.Classe;
 import org.idrice24.entities.Student;

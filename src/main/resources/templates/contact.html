@@ -6,6 +6,16 @@
 	<title>contact us</title>
 
 	<link rel="stylesheet" type="text/css" href="../static/css/contact.css" th:href="@{/css/contact.css}">
+	<link href="../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet" media="screen" /> 
+
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+	integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+	crossorigin="anonymous">
 </head>
 <body>
 	<section class="contact">
@@ -46,22 +56,25 @@
 			<form  th:action="@{/contact/contactform/send}" th:object="${contact}" method="post">
 				<h2>Sen Message</h2>
 				<div class="inputBox">
-					<input type="text" name="name" th:field="*{name}" placeholder="enter your name" required="required">
-					<span>Full Name</span>
+					<input type="text" name="name" th:field="*{name}" placeholder="Enter your name" required="required">
+					<span>Enter your name</span>
 				</div>
 				<div class="inputBox">
-					<input type="text" name="email" th:field="*{email}" placeholder="enter your Email" required="required">
-					<span>Email</span>
+					<input type="text" name="email" th:field="*{email}" placeholder="Enter your Email" required="required">
+					<span>Enter your Email</span>
 				</div>
 				<div class="inputBox">
-					<textarea type="text" name="message" th:field="*{message}" placeholder="enter your message" required="required" ></textarea>
+					<textarea type="text" name="message" th:field="*{message}" placeholder="Type your message" required="required" ></textarea>
 					<span>Type your Message...</span>
 				</div>
 				<div class="inputBox">
 					<input type="submit" name="" value="Send">
-					<input type="reset" name="reset" value="Reset">
 				</div>
+				
 			</form>
+			<div class="inputBox">
+				<input type="reset" name="reset" value="Reset">
+			</div>
 		</div>
 		
 	</div>

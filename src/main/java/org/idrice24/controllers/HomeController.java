@@ -34,7 +34,13 @@ public class HomeController{
     public String homePage(Model model){
         
         return "home";
-    }	
+    }
+    
+    @GetMapping(value="index")
+    public String index(Model model){
+        model.addAttribute("index", model);
+        return "index";
+    }
 
     @GetMapping(value="media")
     public String medaiPage(Model model){
