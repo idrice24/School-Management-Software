@@ -70,12 +70,12 @@
 										<td th:text="${student.classe}"></td>
 										<td><a th:href="@{/students/view/{id}(id=${student.id})}"
 											class="btn btn-success">
-											<i class="fas fa-user-view ml-2"></i></a></td>
+											<i class="fas fa-user-view ml-2">V</i></a></td>
 										<td><a th:href="@{/students/edit/{id}(id=${student.id})}"
 											class="btn btn-primary"><i class="fas fa-user-edit ml-2"></i></a></td>
 										<td><a
 											th:href="@{/students/delete/{id}(id=${student.id})}"
-											class="btn btn-primary"><i class="fas fa-user-times ml-2"></i></a></td>
+											class="btn btn-danger"><i class="fas fa-user-times ml-2"></i></a></td>
 									</tr>
 								</tbody>
 							</table>

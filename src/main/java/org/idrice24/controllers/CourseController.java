@@ -24,8 +24,10 @@ public class CourseController{
     public CourseController(CourseService courseService){
         this.courseService = courseService;
     }
+
     @GetMapping(value="course")
-    public String getCourseView(){
+    public String getCourseView(Model model){
+        model.addAttribute("course", model);
         return "add-course";
     }
 

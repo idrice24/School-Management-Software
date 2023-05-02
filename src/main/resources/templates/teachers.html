@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Teachers</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+	integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+	crossorigin="anonymous">
+ <link rel="stylesheet" href="../static/css/shards.min.css">
+ <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+
+ <link href="../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet" media="screen" /> 
+
+ <div th:block th:include="fragments/headerinc :: header"></div>
+</head>
+<body>
+	<div class="container my-2">
+		<div class="card">
+			<div class="card-body">
+				<div th:switch="${teachers}" class="container my-5">
+					<p class="my-5">
+						<a href="/teachers/teacher/signup" class="btn btn-primary"><i
+							class="fas fa-user-plus ml-2"> Add teacher</i></a>
+					</p>
+					<p class="my-5">
+						<button class="btn btn-primary"><i
+							class="fas fa-user-plus ml-2">Search </i></button>
+							<input type="text"  placeholder="enter a word">
+					</p>
+					<div class="col-md-10">
+						<h2 th:case="null">No teachers yet!</h2>
+						<div th:case="*">
+							<table class="table table-striped table-responsive-md">
+								<thead>
+									<tr>
+										<th>Name</th>
+										<th>Email</th>
+										<th>Phone No</th>
+										<th>Teacher UI</th>
+										<th>J Date</th>
+										<th>Teacher Course</th>
+										<th>Gender</th>
+										<th>Address</th>
+										<th>SECTION</th>
+										<th>Class</th>
+                                        <th>Department</th>
+										<th>View</th>
+										<th>Edit</th>
+										<th>Delete</th>
+										
+									</tr>
+								</thead>
+								<tbody>
+									<tr th:each="teacher : ${teachers}">
+										<td th:text="${teacher.teaname}"></td>
+										<td th:text="${teacher.teaemail}"></td>
+										<td th:text="${teacher.teaphone}"></td>
+										<td th:text="${teacher.sui}"></td>
+										<td th:text="${teacher.jndate}"></td>
+										<td th:text="${teacher.teacourse}"></td>
+										<td th:text="${teacher.gender}"></td>
+										<td th:text="${teacher.teaaddress}"></td>
+										<td th:text="${teacher.section}"></td>
+										<td th:text="${teacher.classe}"></td>
+                                        <td th:text="${teacher.depmt}"></td>
+										<td><a th:href="@{/teachers/view/teacher/{id}(id=${teacher.id})}"
+											class="btn btn-success">
+											<i class="fas fa-user-view ml-2">V</i></a></td>
+										<td><a th:href="@{/teachers/edit/teacher/{id}(id=${teacher.id})}"
+											class="btn btn-primary"><i class="fas fa-user-edit ml-2">E</i></a></td>
+										<td><a
+											th:href="@{/teachers/delete/teacher/{id}(id=${teacher.id})}"
+											class="btn btn-danger"><i class="fas fa-user-times ml-2">D</i></a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

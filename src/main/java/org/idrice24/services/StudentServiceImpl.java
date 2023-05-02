@@ -17,14 +17,14 @@ public class StudentServiceImpl implements StudentService{
 
     @Override
     public Iterable<Student> listAllStudents() {
-        // TODO Auto-generated method stub
+        
 
         return studentRepository.findAll();
     }
 
     @Override
     public void saveStudent(Student student) {
-        // TODO Auto-generated method stub
+        
 
         studentRepository.save(student);
         
@@ -32,7 +32,6 @@ public class StudentServiceImpl implements StudentService{
 
     @Override
     public long getLastId() {
-        // TODO Auto-generated method stub
         return studentRepository.count();
     }
     

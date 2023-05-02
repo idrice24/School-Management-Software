@@ -1,0 +1,17 @@
+@charset "utf-8";
+/*
+Template Name: Education Time
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+File: Gallery CSS
+*/
+
+#gallery{display:block; width:100%; line-height:1.6em;}
+#gallery .gallerycontainer{display:block; width:100%; margin-bottom:30px; padding:0 0 20px 0; border-bottom:1px solid #D7DBE0;}
+#gallery .gallerycontainer .fl_left{width:300px;}
+#gallery .gallerycontainer .fl_right{width:630px;}
+#gallery ul{margin:0; padding:0; list-style:none;}
+#gallery li{float:left; margin:0 10px 10px 0;}
+#gallery li.last{margin-right:0;}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Update Teacher</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<div th:block th:include="fragments/headerinc :: header"></div>
+</head>
+<body>
+	<div class="container my-5">
+	<h3> Update Teacher</h3>
+		<div class="card">
+			<div class="card-body">
+				<div class="col-md-8">
+
+					<form action="#" th:action="@{/teachers/update/teacher/{id}(id=${teacher.id})}"
+						th:object="${teacher}" method="post">
+						<div class="row">
+							<div class="form-group col-md-8">
+								<label for="teaname" class="col-form-label">Name</label> <input
+									type="text" th:field="*{teaname}" class="form-control" id="fullname"
+									placeholder="Teacher Full Name"> <span
+									th:if="${#fields.hasErrors('teaname')}" th:errors="*{teaname}"
+									class="text-danger"></span>
+							</div>
+							<div class="form-group col-md-8">
+								<label for="teaemail" class="col-form-label">Email</label> <input
+									type="text" th:field="*{teaemail}" class="form-control" id="teaemail"
+									placeholder="Teacher Email"> <span
+									th:if="${#fields.hasErrors('teaemail')}" th:errors="*{teaemail}"
+									class="text-danger"></span>
+							</div>
+
+							<div class="form-group col-md-8">
+								<label for="teaphone" class="col-form-label">Phone No</label> <input
+									type="text" th:field="*{teaphone}" class="form-control"
+									id="teaphone" placeholder="Teacher Phone number"> <span
+									th:if="${#fields.hasErrors('teaphone')}" th:errors="*{teaphone}"
+									class="text-danger"></span>
+							</div>
+
+							<div class="form-group col-md-8">
+								<label for="sui" class="col-form-label">Teacher UI</label> <input
+									type="text" th:field="*{sui}" class="form-control"
+									id="sui" placeholder="sui"> <span
+									th:if="${#fields.hasErrors('sui')}" th:errors="*{sui}"
+									class="text-danger"></span>
+							</div>
+
+							<div class="form-group col-md-8">
+								<label for="teacourse" class="col-form-label">Teacher Course</label> <input
+									type="text" th:field="*{teacourse}" class="form-control"
+									id="teacourse" placeholder="Teacher's Course"> <span
+									th:if="${#fields.hasErrors('teacourse')}" th:errors="*{teacourse}"
+									class="text-danger"></span>
+							</div>
+
+							<div class="form-group col-md-8">
+								<label for="pob" class="col-form-label">Place of birth</label> <input
+									type="text" th:field="*{pob}" class="form-control"
+									id="pob" placeholder="Place of Birth"> <span
+									th:if="${#fields.hasErrors('pob')}" th:errors="*{pob}"
+									class="text-danger"></span>
+							</div>
+
+							<div class="form-group col-md-8">
+								<label for="gender" class="col-form-label">Gender</label>
+									<select id="gender" th:field="*{gender}" class="form-control">
+											<option value=""></option>
+											<option value="MALE">Male</option>
+											<option value="FEMALE">female</option>
+											<option value="OTHER">Other</option>
+									</select>
+							</div>
+
+							<div class="form-group col-md-8">
+								<label for="teaaddress" class="col-form-label">Address</label> <input
+									type="text" th:field="*{teaaddress}" class="form-control"
+									id="teaaddress" placeholder="teaaddress"> <span
+									th:if="${#fields.hasErrors('teaaddress')}" th:errors="*{teaaddress}"
+									class="text-danger"></span>
+							</div>
+
+							<div class="form-group col-md-8">
+								<label class="col-md-6 control-label">Section</label>
+								<select id="section" type="text" th:field="*{section}" class="form-control">
+									<option value="">Section</option>
+									<option value="ENGLISH">ENGLISH</option>
+									<option value="FRENCH">FRENCH</option>
+									<option value="GERMAN">GERMAN</option>
+
+								</select>
+							</div>
+
+							<div class="form-group">
+								<label class="col-md-6 control-label">Class</label>
+								<div class="col-md-6">
+									<div th:if="${not #lists.isEmpty(classes)}">
+										<select th:field="*{Classe}">
+											 <option th:each="dropDownItem : ${classes}"
+															 th:value="${dropDownItem.classeId}"
+															 th:text="${dropDownItem.classeName}"/>
+										 </select>
+									</div>
+									<div th:if="${ #lists.isEmpty(classes)}">
+										<div>"No Class were found, please create some first"</div>
+									</div>
+								</div>
+
+							</div>
+
+                            <div>
+                                <label for="depmt" class="col-md-6 control-label">Department</label>
+                                <select name="depmt" id="depmt" th:field="*{depmt}" class="form-control">
+                                    <option value=""></option>
+                                    <option value="Computer Science ">Computer Science</option>
+                                    <option value="Geology"> Geography/Biology</option>
+                                    <option value="Chemistry">Chemistry</option>
+                                    <option value="Mathematics">Mathematics</option>
+                                    <option value="Economics">Economics</option>
+                                    <option value="History">History</option>
+                                    <option value="Music">Music</option>
+                                    <option value="Psychology">Psychology</option>
+                                    <option value="Physics">Physics</option>
+                                    <option value="Philosophy">Philosophy</option>
+                                    <option value="Sociology">Sociology</option>
+                                    <option value="Political Science">Political Science</option>
+                                    <option value="Anthropology">Anthropology</option>
+                                    <option value="Management">Management</option>
+                                    <option value="Accounting">Accounting</option>
+                                    <option value="Social Science">Social Science</option>
+                                    <option value="Finance">Finance</option>
+                                    <option value="Biochemistry">Biochemistry</option>
+                                    <option value="Physical Education">Physical Education</option>
+                                    <option value="Chemical Engineering">Chemical Engineering</option>
+                                    <option value="Law">Law</option>
+                                    <option value="Humanities">Humanities</option>
+                                    <option value="Environmental Engineering">Environmental Engineering</option>
+                                    <option value="Languages">Languages</option>
+                                </select>
+                            </div>
+
+							<div class="col-md-6">
+								<input type="submit" class="btn btn-primary" value="Add Student">
+							</div>
+
+							<div class=""col-md-6>
+								<a href="http://localhost:8080/students/list"><button class="bnt bnt-secondary">Cancel</button></a>
+							</div>
+
+							<div class="form-group col-md-8"></div>
+
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

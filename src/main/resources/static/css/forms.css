@@ -1,0 +1,34 @@
+@charset "utf-8";
+/*
+Template Name: Education Time
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+File: Forms CSS
+*/
+
+form, fieldset, legend{margin:0; padding:0; border:none;}
+legend{display:none;}
+input, textarea, select{font-size:12px; font-family:Georgia, "Times New Roman", Times, serif;}
+
+/* ----------------------------------------------Search Form------------------------------------- */
+
+#login{float:right; width:380px; margin:8px 0 0 0; padding:0;}
+#login div{float:left; margin:8px 0 0 10px; font-size:11px; text-transform:uppercase;}
+#login input{display:block; float:right; width:165px; height:20px; margin:0 0 10px 10px; padding:0 5px 0 10px; color:#5F8EC2; background:url("/images/form_input_long.gif") 0 0 no-repeat #2B4D71; border:none;}
+#login input#signin{width:80px; height:20px; margin:0; padding:0; cursor:pointer; background:none; float:right;}
+
+/* ----------------------------------------------Forms in Content Area------------------------------------- */
+
+#container #respond{display:block; width:100%;}
+#container #respond input{width:170px; padding:2px; border:1px solid #CCCCCC; margin:5px 5px 0 0;}
+#container #respond textarea{width:98%; border:1px solid #CCCCCC; padding:2px; overflow:auto;}
+#container #respond p{margin:5px 0;}
+#container #respond #submit, #container #respond #reset{margin:0; padding:5px; color:#666666; background-color:#F7F7F7; border:1px solid #CCCCCC; cursor:pointer;}
+
+/* ----------------------------------------------Homepage Newsletter------------------------------------- */
+
+#homepage input#newsletter{display:block; float:left; width:240px; height:30px; margin:0; padding:0 10px; color:#F8F9F3; background:url("/images/newsletter_form.gif") 0 0 no-repeat#2B4D71; border:none;}
+#homepage input#subscribe{width:100px; height:30px; float:left; margin:0 0 0 20px; padding:0; cursor:pointer;}
+#homepage .form_hint{font-size:11px;}

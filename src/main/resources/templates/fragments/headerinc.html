@@ -4,25 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/static/css/layout.css}">
+    <link rel="stylesheet" th:href="@{/js/liteaccordion-v2.2/css/liteaccordion.css}" type="text/css" />
+    <title>headerinc</title>
 
  
     <div th:fragment="header">
-        <!--<div id="cssmenu">
-            <div>LOGO</div>
-            <li class="active "><a href="http://localhost:8080/home">HOME</a></li>
-                    <li ><a href="http://localhost:8080/contact">CONTACT</a></li>
-                    <li ><a href="http://localhost:8080/aboutus">ABOUT-US</a></li>
-                    <li ><a href="http://localhost:8080/media">MEDIA</a></li>
-            <li ><a href="#">SMS237</a>
-                <ul>
-                    <li><a href="http://localhost:8080/student/login">login as Student</a></li>
-                    <li><a href="http://localhost:8080/teacher/login">login as Teacher</a></li>
-                    <li><a href="http://localhost:8080/parent/login">login as Parent</a></li>
-                    <li><a href="http://localhost:8080/admin/login">login as Admin</a></li>
-                </ul>
-            </li>
-        </div>-->
          <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -42,8 +29,8 @@
                 </div>
                 <ul class="nav navbar-nav show">
                     <li class="active "><a href="http://localhost:8080/home">Home</a></li>
-                    <li ><a href="http://localhost:8080/contact">CONTACT</a></li>
-                    <li ><a href="http://localhost:8080/aboutus">ABOUT-US</a></li>
+                    <li ><a href="http://localhost:8080/contact/show">CONTACT</a></li>
+                    <li ><a href="http://localhost:8080/about-us/show">ABOUT-US</a></li>
                     <li ><a href="http://localhost:8080/media">MEDIA</a></li>
                     
                     <li class="dropdown">

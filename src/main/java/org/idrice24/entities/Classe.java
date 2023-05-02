@@ -7,11 +7,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 
-@Entity
+@Entity(name="classe")
 public class Classe{
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long classe_id;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long id;
 
 	@Column(name="classe_name")
 	private String classe_name;
@@ -21,12 +21,12 @@ public class Classe{
 
 	public Classe(){}
 
-	public void setClasseId(long classe_id){
-		this.classe_id = classe_id;
+	public void setId(long id){
+		this.id = id;
 	}
 
-	public long getClasseId(){
-		return classe_id;
+	public long getId(){
+		return id;
 	}
 
 	public void setClasseName(String classe_name){

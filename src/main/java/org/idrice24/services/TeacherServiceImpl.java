@@ -27,7 +27,6 @@ public class TeacherServiceImpl implements TeacherService {
 
     @Override
     public Teachers findById(long id) {
-        // TODO Auto-generated method stub
         return teacherRepository.findById(id);
     }
 

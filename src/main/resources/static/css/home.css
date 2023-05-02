@@ -1,3 +1,13 @@
+
+@charset "utf-8";
+/*
+Template Name: Education Time
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+File: Homepage CSS
+*/
 .admin-message-text {
     font-style: normal;
     font-size: 22px;
@@ -8,3 +18,56 @@ body{
 	background-repeat: no-repeat;
 	 background-attachment: fixed;
 }
+
+#homepage{display:block; width:100%; line-height:1.6em;}
+
+/* ----------------------------------------------Generalise------------------------------------- */
+
+#hpage_quicklinks ul, #hpage_gallery ul, #hpage_socialize ul, #hpage_latestnews ul, #hpage_specials ul{margin:0; padding:0; list-style:none;}
+
+/* ----------------------------------------------Left Column------------------------------------- */
+
+#homepage .fl_left{display:block; width:380px;}
+
+/* ----------------------------------------------Featured Slider------------------------------------- */
+
+#featured_slide{height:360px; padding-top:30px;}
+
+/* ----------------------------------------------Quick Links------------------------------------- */
+
+#hpage_quicklinks{margin-bottom:30px;}
+#hpage_quicklinks li{display:block; float:left; width:180px; margin-bottom:3px; padding:0 10px 0 0;}
+#hpage_quicklinks li a{display:block; padding-left:10px; background:url("/images/arrow.gif") left center no-repeat;}
+#hpage_quicklinks li a:hover{color:#591F58; background-color:#E9EBED;}
+
+/* ----------------------------------------------Gallery Images------------------------------------- */
+
+#hpage_gallery{margin:0 0 20px 0;}
+#hpage_gallery li{display:block; float:left; width:185px; height:140px; margin:0 10px 10px 0;}
+#hpage_gallery li.last{margin-right:0;}
+#hpage_gallery a{display:block; padding:4px; border:1px solid #D7DBE0;}
+#hpage_gallery a:hover{color:#591F58; background-color:#8199A9;}
+
+/* ----------------------------------------------Socialize------------------------------------- */
+
+#hpage_socialize{}
+#hpage_socialize span{display:inline-block; width:80px; font-weight:bold;}
+
+/* ----------------------------------------------Right Column------------------------------------- */
+
+#homepage .fl_right{display:block; width:540px;}
+
+/* ----------------------------------------------Latest News------------------------------------- */
+
+#hpage_latestnews{display:block; width:100%; margin-bottom:30px;}
+#hpage_latestnews ul, #hpage_latestnews li{display:block; width:100%; margin:0; padding:0; list-style:none;}
+#hpage_latestnews .latestnews{display:block; float:right; width:355px; margin:0; padding:0;}
+#hpage_latestnews .imgl{margin:0;}
+#hpage_latestnews p.readmore{display:block; width:100%; clear:both; margin:0 0 20px 0; padding:0 0 15px 0; border-bottom:1px solid #D7DBE0; text-align:right;}
+
+/* ----------------------------------------------Specials------------------------------------- */
+
+#hpage_specials{display:block; width:100%;}
+#hpage_specials li{display:block; float:left; width:170px; margin:0 15px 0 0;}
+#hpage_specials li.last{margin-right:0;}
+#hpage_specials .box{display:block; width:100%; margin-bottom:10px; padding-bottom:10px; border-bottom:1px solid #D7DBE0;}
