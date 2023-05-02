@@ -34,13 +34,5 @@ public class StudentServiceImpl implements StudentService{
     public long getLastId() {
         return studentRepository.count();
     }
-
-    /*@Override
-    public List<Student> findByClasse(Class<? extends Classe> s) {
-        
-        return studentRepository.findBySui(s);
-    }*/
-
-
     
 }

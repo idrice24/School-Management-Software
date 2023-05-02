@@ -7,14 +7,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 
-@Entity
+@Entity(name="classe")
 public class Classe{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 
 	@Column(name="classe_name")
-	private String classeName;
+	private String classe_name;
 
 	@Column(name="sect")
 	private String sect;
@@ -29,12 +29,12 @@ public class Classe{
 		return id;
 	}
 
-	public void setClasseName(String classeName){
-		this.classeName = classeName;
+	public void setClasseName(String classe_name){
+		this.classe_name = classe_name;
 	}
 
 	public String getClasseName(){
-		return classeName;
+		return classe_name;
 	}
 
 	public void setSect(String sect){

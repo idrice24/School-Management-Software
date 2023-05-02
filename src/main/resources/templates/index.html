@@ -8,12 +8,12 @@ Licence URI: http://www.os-templates.com/template-terms
 -->
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Education Time</title>
+<title>Education site</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <link rel="stylesheet" th:href="@{/css/layout.css}" type="text/css" />
 <script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
 <!-- liteAccordion is Homepage Only -->
-<link rel="stylesheet" th:href="@{/js/liteaccordion-v2.2/css/liteaccordion.css}" type="text/css" />
+<link rel="stylesheet" th:href="@{../js/liteaccordion-v2.2/css/liteaccordion.css}" type="text/css" />
 </head>
 <body id="top">
 <div class="wrapper row1">
@@ -38,8 +38,8 @@ Licence URI: http://www.os-templates.com/template-terms
   <div id="topnav">
     <ul>
       <li class="active"><a href="index">Homepage</a></li>
-      <li><a href="pages/style-demo.html">Style Demo</a></li>
-      <li><a href="pages/full-width.html">Full Width</a></li>
+      <li><a href="">About-us</a></li>
+      <li><a th:href="@{/contact/show}">Contact us</a></li>
       <li><a href="#">DropDown</a>
         <ul>
           <li><a href="#">Link 1</a></li>

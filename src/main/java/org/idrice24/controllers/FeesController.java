@@ -54,7 +54,7 @@ public class FeesController {
         if(result.hasErrors()){
             return "add-fees";
         }
-        fees.setTotal(50000);
+        fees.setTotal(70000);
         fees.setYearp(Date());
         long r = fees.getTotal() - fees.getAmount();
         if( r <= 0){
@@ -114,9 +114,7 @@ public class FeesController {
         Fees fees = feesService.findById(id);
         feesService.delete(fees);
         model.addAttribute("feess", feesService.getAllFees());
-
         return "fees";
     }
-
     
 }

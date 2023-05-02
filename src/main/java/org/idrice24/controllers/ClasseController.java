@@ -28,8 +28,8 @@ public class ClasseController {
     }
 
     @GetMapping("classe")
-    public String viewPage(){
-
+    public String viewPage(Model model){
+        model.addAttribute("classe", model);
         return "add-classe";
     }
 
@@ -84,7 +84,9 @@ public class ClasseController {
     @GetMapping("view/classe/{id}")
     public String viewClasse(@PathVariable("id") long id, Model model){
         Classe classe = classeService.getClasseById(id);
+        String classeName = classe.getClasseName();
         model.addAttribute("classes", classe);
+        System.out.println(classeName);
         return "classeview";
     }
 
