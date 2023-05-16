@@ -95,11 +95,11 @@
 				<version>1.18.20</version>
 			</dependency>
 
-			<!--<dependency>
+			<dependency>
 				<groupId>org.springframework.security</groupId>
 				<artifactId>spring-security-config</artifactId>
 				<version>5.3.4.RELEASE</version>
-			</dependency>-->
+			</dependency>
 
 			<dependency>
 				<groupId>org.checkerframework</groupId>
@@ -118,11 +118,16 @@
 				<artifactId>spring-boot-starter-thymeleaf</artifactId>
 			</dependency>
 			
-			<!--<dependency>
+			<dependency>
 				<groupId>org.springframework.security</groupId>
 				<artifactId>spring-security-web</artifactId>
 				<version>5.3.4.RELEASE</version>
-			</dependency>-->
+			</dependency>
+			
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-mail</artifactId>
+			</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
