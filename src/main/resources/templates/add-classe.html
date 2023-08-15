@@ -24,12 +24,12 @@
         <div class="card">
             <div class="card-body">
                 <div class="col-md-10">
-                    <form action="#" th:action="@{/classes/classe/add}" th:object="${classe}" method="post">
+                    <form action="#" th:action="@{/classes/classe/add}" th:object="${addClasse}" method="post">
                         <div class="row">
                             <div class="form-group col-md-6">
-                                <label for="classeName" class="col-form-label">Claas Name</label>
-                                <input type="text" th:field="*{classeName}" class="form-control" id="classeName" placeholder="Name">
-                                <span th:if="${#fields.hasErrors('classeName')}" th:errors="*{classeName}" class="text-danger"></span>
+                                <label for="classename" class="col-form-label">Claas Name</label>
+                                <input type="text" th:field="*{classename}" class="form-control" id="classename" placeholder="Name">
+                                <span th:if="${#fields.hasErrors('classename')}" th:errors="*{classename}" class="text-danger"></span>
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="sect" class="col-form-label">Section</label>

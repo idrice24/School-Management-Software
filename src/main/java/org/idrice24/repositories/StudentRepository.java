@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 public interface StudentRepository extends CrudRepository<Student, Long> {
     Student findById(long id);
 
-   // @Query(value = "SELECT s FROM Student s WHERE Student.sui LIKE : classe ")
+    //@Query(value = "SELECT s FROM Student s WHERE Student.sui LIKE : classe ")
    // List<Student> findBySui(@Param("classe") Class<? extends Classe> s);
 
 }

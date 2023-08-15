@@ -49,7 +49,7 @@
                                     <tbody>
                                         <tr th:each="classe : ${classes}">
                                             <td th:text="${classe.id}"></td>
-                                            <td th:text="${classe.classeName}"></td>
+                                            <td th:text="${classe.classename}"></td>
                                             <td th:text="${classe.sect}"></td>
                                             <td><a th:href="@{/classe/view/classe/{id}(id=${classe.id})}" 
                                                 class="btn btn-secondary"><i class="fas fa-user-view ml-2"></i></a></td>

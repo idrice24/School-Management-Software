@@ -96,9 +96,12 @@
 								<label class="col-md-6 control-label">Section</label>
 								<select id="section" type="text" th:field="*{section}" class="form-control">
 									<option value="">Section</option>
-									<option value="ENGLISH">ENGLISH</option>
+									<option value="ENGLISH">COMERCIAL</option>
 									<option value="FRENCH">FRENCH</option>
 									<option value="GERMAN">GERMAN</option>
+									<option value="CHINIS">CHINIS</option>
+									<option value="INDUSTRIAL">INDUSTRIAL</option>
+									
 									
 								</select>
 							</div>
@@ -110,8 +113,8 @@
 										<select th:field="*{classe}" class="form-control">
 											<option value=""></option>
 											 <option th:each="dropDownItem : ${classes}"
-											 		th:text="${dropDownItem.classeName}"				 
-											 		th:value="${dropDownItem.classeName}"/>
+											 		th:text="${dropDownItem.classename}"				 
+											 		th:value="${dropDownItem.classename}"/>
 										 </select>
 									</div>
 									<div th:if="${ #lists.isEmpty(classes)}">

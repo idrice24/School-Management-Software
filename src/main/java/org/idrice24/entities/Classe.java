@@ -7,19 +7,22 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 
-@Entity(name="classe")
+@Entity()
 public class Classe{
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
-	@Column(name="classe_name")
-	private String classe_name;
+	@Column(name="classename")
+	private String classename;
 
 	@Column(name="sect")
 	private String sect;
 
 	public Classe(){}
+	public Classe(String classename){
+		this.classename = classename;
+	}
 
 	public void setId(long id){
 		this.id = id;
@@ -29,12 +32,12 @@ public class Classe{
 		return id;
 	}
 
-	public void setClasseName(String classe_name){
-		this.classe_name = classe_name;
+	public void setClassename(String classename){
+		this.classename = classename;
 	}
 
-	public String getClasseName(){
-		return classe_name;
+	public String getClassename(){
+		return classename;
 	}
 
 	public void setSect(String sect){
