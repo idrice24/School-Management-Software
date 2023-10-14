@@ -1,7 +1,7 @@
 package org.idrice24.services;
 
-import org.idrice24.entities.AppUser;
-import org.idrice24.repositories.AppUserRepository;
+import org.idrice24.entities.Security.AppUser;
+import org.idrice24.repositories.Security.AppUserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

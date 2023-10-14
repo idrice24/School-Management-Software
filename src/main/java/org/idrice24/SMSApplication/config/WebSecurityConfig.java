@@ -23,12 +23,19 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
         http
             .csrf().disable()
             .authorizeRequests()
+                .antMatchers("/").permitAll()
+                .antMatchers("/fees/**").permitAll()
                 .antMatchers("/login").permitAll()
+                .antMatchers("/signUp").permitAll()
                 .antMatchers("/api/v*/registration/**").permitAll()
+                .antMatchers("/userPage").access("hasRole('USER')")
+                            .antMatchers("/userHome").permitAll()
+                .antMatchers("/admin/**").hasAuthority("ADMIN")
             .anyRequest()
             .authenticated()
             .and()
-            .formLogin();
+            .formLogin()
+            .loginPage("/login").failureUrl("/404?error=true");
     }
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception  {
